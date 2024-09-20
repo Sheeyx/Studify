@@ -1,0 +1,105 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    position: relative;
+    z-index: 1000;
+    height: 80px;
+  
+    .nav {
+      ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+  
+      a {
+        text-decoration: none;
+        color: #555;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #ff7b40;
+        }
+      }
+  
+      &.open {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        animation: slide-down 0.3s ease-in-out;
+        
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    }
+  
+    .burger-menu {
+      display: none;
+    }
+  
+    .contact .contact-btn {
+      padding: 10px 20px;
+      border: 1px solid #ff7b40;
+      border-radius: 20px;
+      color: #ff7b40;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  
+      &:hover {
+        background-color: #ff7b40;
+        color: white;
+      }
+    }
+  }
+  
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      .nav {
+        display: none;
+      }
+  
+      .burger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 28px;
+        color: #ff7b40;
+        transition: transform 0.3s ease-in-out;
+  
+        &.open {
+          transform: rotate(90deg); // Animation for burger icon
+        }
+      }
+  
+      .nav.open {
+        display: block;
+      }
+  
+      .logo img {
+        height: 40px;
+      }
+    }
+  }
+  
