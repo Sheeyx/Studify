@@ -22,6 +22,6 @@
   },
   "include": [
     "src",
-    "src/custom.d.ts"  // Add the path to your custom type definitions
-, "custom.d.ts"  ]
+    "src/custom.d.ts"  // Keep only the correct path
+  ]
 }
