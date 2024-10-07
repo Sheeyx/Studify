@@ -1,0 +1,84 @@
+.how-works {
+    padding: 100px 0 !important;
+
+    .heading{
+        color: var(--Orange, #FF8225);
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 56px;
+        letter-spacing: -0.48px;
+    }
+
+    .text {
+        color: var(--text-gray, #5E6A6D);
+        max-width: 564px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.18px;
+        margin-top: 24px;
+    }
+
+    .application-steps {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 48px;
+
+        .accordion {
+            min-width: 465px;
+            margin-right: 100px;
+
+            .panel {
+                border: none;
+                margin-bottom: 24px;
+                border-radius: 24px;
+                border: 1px solid rgba(94, 106, 109, 0.20);
+                background: #FFF;
+                padding: 10px;
+                transition: all 0.7s;
+
+                svg {
+                    fill: #5E6A6D;
+                    border: 2px solid #5E6A6D;
+                    border-radius: 50%;
+                    transition: all 0.7s;
+                }
+
+                &::before {
+                    opacity: 0;
+                }
+
+            }
+
+            .active-panel {
+                border-radius: 24px;
+                border: 1px solid #FF8225;
+                background: #FFF;
+                box-shadow: 0px 4px 12px 8px rgba(255, 130, 37, 0.3);
+                padding: 10px;
+                transition: all 0.7s;
+                color: #FF8225;
+
+                svg {
+                    fill: #FF8225;
+                    transform: rotate(90deg);
+                    border: 2px solid #FF8225;
+                    border-radius: 50%;
+                    transition: all 0.7s;
+                }
+
+                &::before {
+                    opacity: 0;
+                }
+            }
+        }
+
+        .show-panel {
+            border-radius: 24px;
+            border: 1px solid rgba(94, 106, 109, 0.20);
+            background: #FFF;
+            padding: 32px;
+        }
+    }
+}
