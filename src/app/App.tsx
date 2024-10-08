@@ -3,6 +3,7 @@ import Header from './components/header';
 import HeroSection from '../screens/home/HeroSection';
 import WhyStudify from '../screens/home/WhyStudify';
 import HowWorks from '../screens/home/HowWorks';
+import AboutCompany from '../screens/home/AboutCompany';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <HeroSection />
         <WhyStudify />
         <HowWorks />
+        <AboutCompany/>
     </div>
   );
 }
