@@ -1,0 +1,94 @@
+.price-package {
+    background: rgba(255, 130, 37, 0.05);
+    padding: 64px 0;
+
+    .heading {
+        color: #FF8225;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 56px;
+        letter-spacing: -0.48px;
+    }
+
+    .text {
+        color: #5E6A6D;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.18px;
+        width: 540px;
+        margin-top: 24px;
+    }
+    
+    .card {
+        padding: 28px !important;
+        border-radius: 24px;
+        border: 1px solid rgba(94, 106, 109, 0.20);
+        background: #FFF;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid #FFF;
+            background: var(--Orange, #FF8225);
+            color: #FFF;
+            transition: 0.3s all;
+
+            .package {
+                color: #fff;
+            }
+
+            .text-line {
+                color: #fff;
+                span {
+                    color: #fff;
+                }
+            }
+
+            .btn {
+                background: #FFF;
+            }
+
+            
+        }
+
+        .package {
+            color: #FF8225;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: -0.24px;
+        }
+
+        .text-line {
+            color: #5E6A6D;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-top: 16px;
+            span {
+                color: #FF8225;
+                font-size: 48px;
+                font-weight: 500;
+                line-height: 56px;
+                letter-spacing: -0.48px;
+            }
+        }
+
+        .divider {
+            margin-top: 28px;
+            height: 1px;
+        }
+
+        .btn {
+            border-radius: 20px;
+            border: 1px solid var(--Orange, #FF8225);
+            color: var(--Orange, #FF8225);
+            font-size: 14px;
+            padding: 16px 102px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.18px;
+            margin-top: 80px;
+        }
+    }
+}

@@ -4,6 +4,7 @@ import HeroSection from '../screens/home/HeroSection';
 import WhyStudify from '../screens/home/WhyStudify';
 import HowWorks from '../screens/home/HowWorks';
 import AboutCompany from '../screens/home/AboutCompany';
+import PricePackage from '../screens/home/PricePackage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <WhyStudify />
         <HowWorks />
         <AboutCompany/>
+        <PricePackage/>
     </div>
   );
 }
