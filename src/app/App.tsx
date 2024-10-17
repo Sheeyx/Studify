@@ -5,6 +5,7 @@ import WhyStudify from '../screens/home/WhyStudify';
 import HowWorks from '../screens/home/HowWorks';
 import AboutCompany from '../screens/home/AboutCompany';
 import PricePackage from '../screens/home/PricePackage';
+import OurResults from '../screens/home/OurResults';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <HowWorks />
         <AboutCompany/>
         <PricePackage/>
+        <OurResults/>
     </div>
   );
 }
