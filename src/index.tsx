@@ -5,6 +5,7 @@ import { store } from './app/store';
 import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 import './css/index.css';
+import ContextProvider from './app/context/ContextProvider';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -12,7 +13,9 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+    <ContextProvider>
       <App />
+      </ContextProvider>
     </Provider>
   </React.StrictMode>
 );
