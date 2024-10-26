@@ -1,10 +1,84 @@
 import React from "react";
+import { NavLink, Routes, Route, Navigate } from "react-router-dom";
+import MyPage from "./components/MyPage";
+import Result from "./components/Result";
+import Customer from "./components/Customer";
+import Team from "./components/Team";
+import Journey from "./components/Journey";
+import Statistics from "./components/Statistics";
+import Article from "./components/Article";
+import FAQ from "./components/FAQ";
+import './styles.scss';
 
 const AdminDashboard: React.FC = () => {
   return (
-    <div>
-      <h1>Admin Dashboard</h1>
-      <p>Welcome, Admin! You have access to this page.</p>
+    <div className="admin-dashboard">
+      <aside className="sidebar">
+        <h2 className="sidebar-logo">Admin Panel</h2>
+        <nav className="menu">
+          <NavLink
+            to="mypage"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            My Page
+          </NavLink>
+          <NavLink
+            to="result"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Result
+          </NavLink>
+          <NavLink
+            to="customer"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Customer
+          </NavLink>
+          <NavLink
+            to="team"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Team
+          </NavLink>
+          <NavLink
+            to="journey"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Journey
+          </NavLink>
+          <NavLink
+            to="statistics"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Statistics
+          </NavLink>
+          <NavLink
+            to="article"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Article
+          </NavLink>
+          <NavLink
+            to="faq"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            FAQ
+          </NavLink>
+        </nav>
+      </aside>
+      <main className="content">
+        <Routes>
+          <Route path="mypage" element={<MyPage />} />
+          <Route path="result" element={<Result />} />
+          <Route path="customer" element={<Customer />} />
+          <Route path="team" element={<Team />} />
+          <Route path="journey" element={<Journey />} />
+          <Route path="statistics" element={<Statistics />} />
+          <Route path="article" element={<Article />} />
+          <Route path="faq" element={<FAQ />} />
+          <Route path="*" element={<Navigate to="mypage" />} />
+        </Routes>
+      </main>
     </div>
   );
 };
