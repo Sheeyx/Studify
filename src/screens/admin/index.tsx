@@ -1,69 +1,42 @@
 import React from "react";
-import { NavLink, Routes, Route, Navigate } from "react-router-dom";
-import MyPage from "./components/MyPage";
-import Result from "./components/Result";
-import Customer from "./components/Customer";
-import Team from "./components/Team";
-import Journey from "./components/Journey";
-import Statistics from "./components/Statistics";
-import Article from "./components/Article";
-import FAQ from "./components/FAQ";
-import './styles.scss';
+import { NavLink, Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import MyPage from "./MyPage";
+import Result from "./Result";
+import Customer from "./Customer";
+import Team from "./Team";
+import Journey from "./Journey";
+import Statistics from "./Statistics";
+import Article from "./Article";
+import FAQ from "./FAQ";
+import "./styles.scss";
+import MemberService from "../../services/MemberService";
 
 const AdminDashboard: React.FC = () => {
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      const memberService = new MemberService();
+
+      await memberService.logout();
+      navigate("/");  // Redirect to the login page
+    } catch (err) {
+      console.error("Error during logout:", err);
+    }
+  };
   return (
     <div className="admin-dashboard">
       <aside className="sidebar">
         <h2 className="sidebar-logo">Admin Panel</h2>
         <nav className="menu">
-          <NavLink
-            to="mypage"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            My Page
-          </NavLink>
-          <NavLink
-            to="result"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Result
-          </NavLink>
-          <NavLink
-            to="customer"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Customer
-          </NavLink>
-          <NavLink
-            to="team"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Team
-          </NavLink>
-          <NavLink
-            to="journey"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Journey
-          </NavLink>
-          <NavLink
-            to="statistics"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Statistics
-          </NavLink>
-          <NavLink
-            to="article"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            Article
-          </NavLink>
-          <NavLink
-            to="faq"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            FAQ
-          </NavLink>
+          <NavLink to="mypage" className={({ isActive }) => (isActive ? "active" : "")}>My Page</NavLink>
+          <NavLink to="result" className={({ isActive }) => (isActive ? "active" : "")}>Result</NavLink>
+          <NavLink to="customer" className={({ isActive }) => (isActive ? "active" : "")}>Customer</NavLink>
+          <NavLink to="team" className={({ isActive }) => (isActive ? "active" : "")}>Team</NavLink>
+          <NavLink to="journey" className={({ isActive }) => (isActive ? "active" : "")}>Journey</NavLink>
+          <NavLink to="statistics" className={({ isActive }) => (isActive ? "active" : "")}>Statistics</NavLink>
+          <NavLink to="article" className={({ isActive }) => (isActive ? "active" : "")}>Article</NavLink>
+          <NavLink to="faq" className={({ isActive }) => (isActive ? "active" : "")}>FAQ</NavLink>
+          <button onClick={handleLogout} className="logout-button">Logout</button> {/* Logout button */}
         </nav>
       </aside>
       <main className="content">

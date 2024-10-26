@@ -1,0 +1,117 @@
+// Variables for colors and styles
+$primary-color: #ff8225;
+$primary-color-light: #f79c56;
+$background-color: #f5f5f5;
+$text-color: #333;
+$border-radius: 8px;
+$input-border-color: #ccc;
+$input-focus-border-color: $primary-color;
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+
+// Container styles
+.member-update-form {
+  background-color: white;
+  border-radius: $border-radius;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 20px $box-shadow-color;
+
+  h2 {
+    color: $primary-color;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    label {
+      font-size: 1rem;
+      color: $text-color;
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      padding: 0.8rem 1rem;
+      border: 1px solid $input-border-color;
+      border-radius: $border-radius;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+      &:focus {
+        border-color: $input-focus-border-color;
+        box-shadow: 0 0 0 3px $primary-color-light;
+      }
+    }
+
+    textarea {
+      resize: none;
+      min-height: 100px;
+    }
+
+    input[type="file"] {
+      padding: 0.6rem;
+      border: none;
+      border-radius: 0;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: $border-radius;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $primary-color-light;
+        box-shadow: 0 4px 12px $box-shadow-color;
+      }
+
+      &:disabled {
+        background-color: darken($primary-color, 10%);
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .member-update-form {
+    padding: 1.5rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    form {
+      div {
+        gap: 0.8rem;
+      }
+
+      input,
+      textarea {
+        padding: 0.6rem 0.8rem;
+      }
+
+      button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
