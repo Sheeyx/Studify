@@ -11,6 +11,7 @@ import Login from '../screens/admin/components/Login';
 import AdminDashboard from '../screens/admin';
 import PrivateRoute from '../screens/admin/components/PrivateRoute';
 import CustomerReview from '../screens/home/CustomerReview';
+import FAQ from '../screens/home/Faq';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <PricePackage />
             <OurResults />
             <CustomerReview />
+            <FAQ />
           </>
         } />
         <Route path="/login" element={<Login />} />

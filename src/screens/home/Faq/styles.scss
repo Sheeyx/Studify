@@ -1,0 +1,33 @@
+.faq {
+    .heading {
+        color:  #FF8225;
+        text-align: left;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 56px;
+        letter-spacing: -0.48px;
+    }
+
+    .text {
+        color:  #5E6A6D;
+        width: 564px;
+        margin-top: 24px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.18px;
+    }
+
+    .contact-us {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        max-width: 300px;
+        border-radius: 24px;
+        padding: 32px;
+        border: 1px solid rgba(94, 106, 109, 0.20);
+        background: #FFF;
+        text-align: center;
+    }
+}
