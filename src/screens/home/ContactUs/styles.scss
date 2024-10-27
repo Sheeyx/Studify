@@ -1,0 +1,120 @@
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f58634;
+    padding: 2rem;
+  
+    .contact-form-content {
+      display: flex;
+      flex-direction: row;
+      max-width: 900px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  
+    .contact-title {
+      text-align: center;
+      color: #ffffff;
+      font-weight: bold;
+    }
+  
+    .contact-subtitle {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+  
+    .contact-form {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 20px;
+  
+      .form-box {
+        padding: 1rem;
+        border-radius: 8px;
+  
+        .form-box_title {
+          color: #FF8225;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 32px;
+          letter-spacing: -0.24px;
+        }
+      }
+  
+      .text-field {
+        .MuiOutlinedInput-root {
+          border-radius: 20px;
+  
+          // Default border color when not focused
+          fieldset {
+            border-color: #cccccc;
+          }
+  
+          // Change border color on focus
+          &.Mui-focused fieldset {
+            border-color: #FF8225;
+          }
+        }
+  
+        // Change label color on focus
+        .MuiInputLabel-root {
+          color: #000; // Default label color
+        }
+  
+        .MuiInputLabel-root.Mui-focused {
+          color: #FF8225; // Label color when focused
+        }
+      }
+  
+      .submit-button {
+        background-color: #f58634;
+        color: #ffffff;
+        border-radius: 20px;
+        padding: 20px;
+        &:hover {
+          background-color: darken(#f58634, 10%);
+        }
+      }
+    }
+  
+    .contact-info {
+      padding: 2rem;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 20px;
+
+        &_text {
+            color: #173B45;
+            font-size: 18px;
+            font-weight: 600;
+        }
+  
+        svg {
+          color: #f58634;
+          margin-right: 0.5rem;
+        }
+  
+        h6, p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  

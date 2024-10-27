@@ -12,6 +12,8 @@ import AdminDashboard from '../screens/admin';
 import PrivateRoute from '../screens/admin/components/PrivateRoute';
 import CustomerReview from '../screens/home/CustomerReview';
 import FAQ from '../screens/home/Faq';
+import ContactUs from '../screens/home/ContactUs';
+import Footer from './components/footer';
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
             <OurResults />
             <CustomerReview />
             <FAQ />
+            <ContactUs />
+            <Footer />
           </>
         } />
         <Route path="/login" element={<Login />} />
