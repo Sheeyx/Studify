@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import { serverApi } from "../libs/types/config";
-import { LoginInput, Member, MemberInput, MemberUpdateInput } from "../libs/types/member";
+import { ChangePasswordInput, LoginInput, Member, MemberInput, MemberUpdateInput } from "../libs/types/member";
 class MemberService {
   private readonly path: string;
 
@@ -80,6 +80,23 @@ class MemberService {
       return member;
     } catch (err) {
       console.log(" Error updateMember ", err);
+      throw err;
+    }
+  }
+ 
+  public async changePassword(input: ChangePasswordInput): Promise<Member> {
+    try {
+      const url = this.path + "/member/changePassword"; 
+      const result = await axios.post(url, input, { withCredentials: true });
+
+      console.log("changePassword result", result);
+
+      const member: Member = result.data;
+      localStorage.setItem("memberData", JSON.stringify(member));
+
+      return member;
+    } catch (err) {
+      console.log("Error, changePassword", err);
       throw err;
     }
   }

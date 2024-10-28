@@ -35,8 +35,8 @@ export interface MemberUpdateInput {
   memberNick?: string;
   memberAddress?: string;
   memberDesc?: string;
-  memberImage?: string;
-  univerImages?: string[] ;
+  memberImage?: File;
+  univerImages?: File[] ;
   memberPosts?: number;
   memberTeams?: number;
 }
