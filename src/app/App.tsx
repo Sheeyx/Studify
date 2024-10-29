@@ -1,6 +1,5 @@
-// App.tsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Header from "./components/header";
 import HeroSection from "../screens/home/HeroSection";
 import WhyStudify from "../screens/home/WhyStudify";
@@ -21,6 +20,7 @@ function App() {
     <div>
       {!isAdminPage && !isLoginPage && <Header />}
       <Routes>
+
         <Route
           path="/"
           element={
@@ -35,7 +35,10 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
-        
+
+
+        <Route path="/admin" element={<Navigate to="/login" replace />} />
+
         {/* Protect all admin routes */}
         <Route path="/admin/*" element={<PrivateRoute component={AdminDashboard} />} />
       </Routes>
