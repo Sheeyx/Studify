@@ -27,7 +27,7 @@ const Login: React.FC = () => {
       const member = await memberService.login(loginInput);
       setAuthMember(member);
       setLoading(false);
-      navigate("/admin");
+      navigate("/admin/mypage");
     } catch (err) {
       setLoading(false);
       setError("Login failed. Please check your credentials.");
