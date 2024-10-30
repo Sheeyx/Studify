@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { Customer } from "../../../libs/types/customer";
-import CustomerList from "./CustomerList.tsx";
-import CustomerService from "../../../services/CustomerSevice";
 
+import CreateCustomer from "./CreateCustomer";
+import { Snackbar } from "@mui/material";
+import MuiAlert from "@mui/material/Alert";
+import CustomerService from "../../../services/CustomerSevice";
+import CustomerList from "./CustomerList.tsx";
 
 const ParentComponent: React.FC = () => {
   const [customers, setCustomers] = useState<Customer[]>([]);
+  const [isCreating, setIsCreating] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
+  const handleCreateClick = () => setIsCreating(true);
+  const handleBackClick = () => setIsCreating(false);
 
   useEffect(() => {
     const fetchCustomers = async () => {
@@ -41,10 +47,38 @@ const ParentComponent: React.FC = () => {
     }
   };
 
+  const handleCreateSuccess = (newCustomer: Customer) => {
+    setCustomers((prevCustomers) => [...prevCustomers, newCustomer]);
+    setIsCreating(false);
+    setOpenSnackbar(true);
+  };
+
+  const handleCloseSnackbar = () => setOpenSnackbar(false);
+
   return (
     <div>
       <h2>Customer List</h2>
-      <CustomerList customers={customers} onEdit={handleEdit} onRemove={handleRemove} />
+      {!isCreating ? (
+        <>
+          <button className="create-button" onClick={handleCreateClick}>
+            Create
+          </button>
+          <CustomerList customers={customers} onEdit={handleEdit} onRemove={handleRemove} />
+        </>
+      ) : (
+        <>
+          <button className="create-button back-button" onClick={handleBackClick}>
+            Back
+          </button>
+          <CreateCustomer onCreateSuccess={handleCreateSuccess} />
+        </>
+      )}
+
+      <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+        <MuiAlert onClose={handleCloseSnackbar} severity="success" elevation={6} variant="filled">
+          Customer created successfully!
+        </MuiAlert>
+      </Snackbar>
     </div>
   );
 };

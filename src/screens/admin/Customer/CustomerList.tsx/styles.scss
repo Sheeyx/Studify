@@ -7,6 +7,11 @@
       border-collapse: collapse;
       margin-top: 1rem;
     }
+
+    .icon-button:hover {
+      background-color: rgb(251, 2, 2); /* Light grey hover */
+    }
+    
   
     th, td {
       padding: 0.75rem;

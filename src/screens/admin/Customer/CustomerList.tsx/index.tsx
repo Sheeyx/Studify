@@ -89,20 +89,32 @@ const CustomerList: React.FC<CustomerListProps> = ({
                 <td>{customer.role}</td>
                 <td>{customer.description || "N/A"}</td>
                 <td className="customer-actions">
-                  <IconButton
-                    onClick={() => handleEditClick(customer)}
-                    aria-label="edit"
-                    color="primary"
-                  >
-                    <EditIcon />
-                  </IconButton>
-                  <IconButton
-                    onClick={() => onRemove(customer._id)}
-                    aria-label="delete"
-                    color="secondary"
-                  >
-                    <DeleteIcon />
-                  </IconButton>
+                <IconButton
+        onClick={() => handleEditClick(customer)}
+        aria-label="edit"
+        color="primary"
+        style={{
+          padding: "4px", // Smaller padding
+          fontSize: "small", // Adjust icon size
+          backgroundColor: "transparent",
+        }}
+        className="icon-button"
+      >
+        <EditIcon fontSize="small" />
+      </IconButton>
+      <IconButton
+        onClick={() => onRemove(customer._id)}
+        aria-label="delete"
+        color="secondary"
+        style={{
+          padding: "4px",
+          fontSize: "small",
+          backgroundColor: "transparent",
+        }}
+        className="icon-button"
+      >
+        <DeleteIcon fontSize="small" />
+      </IconButton>
                 </td>
               </tr>
             ))}
