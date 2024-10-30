@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { useGlobals } from "../../../../app/hooks/useGlobals";
+import { useGlobals } from "../../../app/hooks/useGlobals";
 
 interface PrivateRouteProps {
   component: React.ComponentType<any>;
