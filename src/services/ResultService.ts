@@ -1,10 +1,12 @@
 import axios from "axios";
 import { serverApi } from "../libs/types/config";
 export interface Result {
-    resultImages:string[]
-    id:string
+    resultImages:File
+    _id:string
 }
-
+export interface ResultInput {
+    resultImages: File;
+  }
 class ResultService {
   private readonly path: string;
 
@@ -12,16 +14,15 @@ class ResultService {
     this.path = `${serverApi}/result`;
   }
 
-  public async createResult( resultImages: string[]): Promise<Result> {
+  public async createResult( input: ResultInput): Promise<Result> {
     try {
       const formData = new FormData();
 
 
-      if (resultImages && resultImages.length > 0) {
-        resultImages.forEach((image, index) => {
-          formData.append(`resultImages`, image);
-        });
-      }
+
+          formData.append(`resultImages`, input.resultImages);
+
+
 
       const result = await axios.post(`${this.path}/create`, formData, {
         withCredentials: true,

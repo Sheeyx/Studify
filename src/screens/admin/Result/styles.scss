@@ -1,0 +1,41 @@
+/* styles.scss */
+
+.result-container {
+    position: relative;
+  }
+  
+  .result-title {
+    margin-bottom: 20px;
+  }
+  
+  .create-button,
+  .back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    width: auto;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  
+    &.back-button {
+      top: auto;
+      margin-bottom: 10px;
+      background-color: #f44336;
+      position: relative;
+    }
+  
+    &:hover {
+      background-color: #45a049;
+    }
+  }
+  
+  .back-button:hover {
+    background-color: #e53935;
+  }
+  
