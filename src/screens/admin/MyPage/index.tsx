@@ -13,6 +13,7 @@ const MyPage: React.FC = () => {
       <button
         onClick={toggleChangePassword}
         style={{
+          marginBottom:"20px",
           width: "150px", // You can set this to a smaller width as desired
           padding: "8px 1px",
         }}
