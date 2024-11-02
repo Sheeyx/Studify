@@ -1,0 +1,60 @@
+.team-list-table {
+    width: 100%;
+    padding: 1rem;
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+  
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      vertical-align: middle;
+    }
+  
+    th {
+      font-weight: bold;
+      background-color: #f5f5f5;
+    }
+  
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  
+    .team-actions {
+      display: flex;
+      gap: 0.3rem;
+      justify-content: flex-end;
+    }
+  
+   
+  
+    .edit-team-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  
+      .image-upload {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+  
+        .image-preview {
+          img {
+            width: 100px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+          }
+        }
+      }
+  
+      .edit-buttons {
+        display: flex;
+        gap: 0.5rem;
+      }
+    }
+  }
+  

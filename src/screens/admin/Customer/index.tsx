@@ -5,7 +5,7 @@ import CreateCustomer from "./CreateCustomer";
 import { Snackbar } from "@mui/material";
 import MuiAlert from "@mui/material/Alert";
 import CustomerService from "../../../services/CustomerSevice";
-import CustomerList from "./CustomerList.tsx";
+import CustomerList from "./CustomerList";
 
 const ParentComponent: React.FC = () => {
   const [customers, setCustomers] = useState<Customer[]>([]);
