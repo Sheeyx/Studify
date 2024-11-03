@@ -10,6 +10,7 @@ import Article from "./Article";
 import FAQ from "./FAQ";
 import "./styles.scss";
 import MemberService from "../../services/MemberService";
+import Client from "./Client";
 
 const AdminDashboard: React.FC = () => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const AdminDashboard: React.FC = () => {
         <h2 className="sidebar-logo">Admin Panel</h2>
         <nav className="menu">
           <NavLink to="mypage" className={({ isActive }) => (isActive ? "active" : "")}>My Page</NavLink>
+          <NavLink to="client" className={({ isActive }) => (isActive ? "active" : "")}>Clients</NavLink>
           <NavLink to="result" className={({ isActive }) => (isActive ? "active" : "")}>Result</NavLink>
           <NavLink to="customer" className={({ isActive }) => (isActive ? "active" : "")}>Customer</NavLink>
           <NavLink to="team" className={({ isActive }) => (isActive ? "active" : "")}>Team</NavLink>
@@ -42,6 +44,7 @@ const AdminDashboard: React.FC = () => {
       <main className="content">
         <Routes>
           <Route path="mypage" element={<MyPage />} />
+          <Route path="client" element={<Client />} />
           <Route path="result" element={<Result />} />
           <Route path="customer" element={<Customer />} />
           <Route path="team" element={<Team />} />

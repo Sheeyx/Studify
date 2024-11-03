@@ -1,0 +1,15 @@
+export enum City {
+    TASHKENT = "TASHKENT",
+    SAMARKAND = "SAMARKAND",
+    BUKHARA = "BUKHARA",
+    KHIVA = "KHIVA",
+    ANDIJAN = "ANDIJAN",
+    NAMANGAN = "NAMANGAN",
+    FERGHANA = "FERGHANA",
+    KARSHI = "KARSHI",
+    NAVOI = "NAVOI",
+    URGENCH = "URGENCH",
+    JIZZAKH = "JIZZAKH",
+    GULISTAN = "GULISTAN",
+  }
+  
