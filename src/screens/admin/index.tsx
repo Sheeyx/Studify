@@ -15,9 +15,12 @@ import Client from "./Client";
 const AdminDashboard: React.FC = () => {
   const navigate = useNavigate();
   const handleLogout = async () => {
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+    if (!confirmLogout) return;
+  
     try {
       const memberService = new MemberService();
-
+  
       await memberService.logout();
       navigate("/");  // Redirect to the login page
     } catch (err) {
@@ -38,7 +41,7 @@ const AdminDashboard: React.FC = () => {
           <NavLink to="statistics" className={({ isActive }) => (isActive ? "active" : "")}>Statistics</NavLink>
           <NavLink to="article" className={({ isActive }) => (isActive ? "active" : "")}>Article</NavLink>
           <NavLink to="faq" className={({ isActive }) => (isActive ? "active" : "")}>FAQ</NavLink>
-          <button onClick={handleLogout} className="logout-button">Logout</button> {/* Logout button */}
+          <button style={{marginTop:"320px"}} onClick={handleLogout} className="logout-button">Logout</button> {/* Logout button */}
         </nav>
       </aside>
       <main className="content">
