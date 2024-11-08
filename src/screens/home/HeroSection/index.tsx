@@ -6,6 +6,7 @@ import Photo from "../../../assets/uni-photo.jpeg";
 import Img1 from "../../../assets/hero-section/glasgow.png";
 import Img2 from "../../../assets/hero-section/harvard-university.png";
 import Img3 from "../../../assets/hero-section/university-sydney.png";
+import PartnerCarousel from './components';
 
 export default function HeroSection() {
   return (
@@ -41,16 +42,8 @@ export default function HeroSection() {
         </Grid>
 
         {/* Partner Universities Section */}
-        <Grid container className="partner" spacing={4} alignItems="center">
-          <Grid item xs={12} md={3}>
-            <Typography className="text">Partnered with top universities</Typography>
-          </Grid>
-          <Grid item xs={12} md={9} className="img-box">
-            <img src={Img1} alt="University of Glasgow" />
-            <img src={Img2} alt="Harvard University" />
-            <img src={Img3} alt="University of Sydney" />
-          </Grid>
-        </Grid>
+       
+        <PartnerCarousel/>
     </Box>
   );
 }

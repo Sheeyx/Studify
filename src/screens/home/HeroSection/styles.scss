@@ -29,6 +29,7 @@
             max-width: 300px;
             padding: 16px 32px;
             font-size: 16px;
+
             svg {
                 margin-left: 12px;
             }
@@ -58,7 +59,6 @@
         }
 
         .percentage {
-            
             .box {
                 background-color: rgba(255, 130, 37, 0.05);
                 border-radius: 50% 0 50% 0;
@@ -95,51 +95,139 @@
                 font-weight: 400;
             }
         }
-        
     }
-    .partner {
-        display: flex;
-        align-items: center;
-        .text {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 22px;
-            color: #5E6A6D;
-            max-width: 124px;
+
+      
+      
+
+    // Media Queries
+    @media (max-width: 1024px) {
+        .hero-section {
+            padding: 80px 20px !important;
+            .container {
+                max-width: 1280px;
+                margin: 0 auto;
+                padding: 0 20px !important;
+            }
         }
-        .img-box {
-            img {
-                margin: 0 40px;
+        .hero-left {            
+            h2 {
+                font-size: 56px;
+                line-height: 64px;
+            }
+            
+            p {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+        }
+
+        .hero-right {
+            padding: 80px 0 !important;
+            
+            .image {
+                height: 350px;
+                width: 200px;
+                margin-right: 24px;
+            }
+
+            .percentage .number {
+                font-size: 56px;
             }
         }
     }
 
-    .carousel {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    
-        .carousel-track {
-            display: flex;
-            width: calc(100% * 6);
-            animation: scroll 12s linear infinite;
-    
-            img {
-                width: 150px; 
-                height: auto;
+    @media (max-width: 768px) {
+        .hero-left {
+            padding: 60px 0;
+
+            h2 {
+                font-size: 48px;
+                line-height: 56px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        .hero-right {
+            flex-direction: row;
+            padding: 60px 0;
+            justify-content: center;
+            
+            .image {
+                height: 300px;
+                width: 180px;
+            }
+
+            .percentage .box,
+            .percentage .box-circle {
+                height: 150px;
+                width: 150px;
+            }
+
+            .percentage .number {
+                font-size: 48px;
+            }
+
+            .percentage p {
+                font-size: 14px;
             }
         }
     }
-    
-    @keyframes scroll {
-        0% {
-            transform: translateX(0); 
+
+    @media (max-width: 480px) {
+        .hero-left {
+            padding: 40px 0;
+            
+            h2 {
+                font-size: 36px;
+                line-height: 44px;
+                max-width: 100%;
+            }
+
+            p {
+                font-size: 12px;
+                max-width: 100%;
+            }
+
+            button {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
         }
-        10% {
-            transform: translateX(-1); 
-        }
-        100% {
-            transform: translateX(-100%);
+
+        .hero-right {
+            padding: 0;
+            .image {
+                height: 220px;
+                width: 140px;
+            }
+
+            .percentage .box,
+            .percentage .box-circle {
+                height: 120px;
+                width: 120px;
+            }
+
+            .percentage .number {
+                font-size: 36px;
+            }
+
+            .percentage p {
+                margin-top: 20px;
+                font-size: 10px;
+            }
         }
     }
 }

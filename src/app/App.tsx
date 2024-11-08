@@ -16,6 +16,10 @@ import OurResults from "../screens/home/OurResults";
 import Login from "../screens/admin/auth/Login";
 import AdminDashboard from "../screens/admin";
 import PrivateRoute from "../screens/admin/auth/PrivateRoute";
+import FAQ from "../screens/home/Faq";
+import Footer from "./components/footer";
+import CustomerReview from "../screens/home/CustomerReview";
+import ContactUs from "../screens/home/ContactUs";
 
 function App() {
   const location = useLocation();
@@ -31,11 +35,15 @@ function App() {
           element={
             <>
               <HeroSection />
-              <WhyStudify />
+              {/* <WhyStudify />
               <HowWorks />
               <AboutCompany />
               <PricePackage />
               <OurResults />
+              <CustomerReview />
+              <ContactUs />
+              <FAQ />
+              <Footer /> */}
             </>
           }
         />
