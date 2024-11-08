@@ -5,7 +5,21 @@
             height: 266px;
             object-fit: cover;  
             border-radius: 20px 20px 0 0;
-            box-shadow: 0px 4px 12px 8px rgba(255, 130, 37, 0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            &:hover {
+                box-shadow: 0px 4px 12px 8px rgba(255, 130, 37, 0.2);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    // Responsive styles
+    @media (max-width: 1024px) {
+        .card {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
         }
     }
 }

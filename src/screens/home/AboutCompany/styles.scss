@@ -8,21 +8,23 @@
         letter-spacing: -0.48px;
     }
 
-    .text{
+    .text {
         color: #5E6A6D;
         max-width: 540px;
         font-size: 18px;
         font-weight: 400;
         line-height: 24px;
         letter-spacing: -0.18px;
-        margin:  0 auto;
+        margin: 0 auto;
     }
 
     .tabs {
         margin-top: 32px;
+        
         .tab {
             border: none;
-            padding: 8px 24px;
+            padding: 8px 12px;
+            max-width: 220px;
             border-radius: 32px;
             border: 1px solid rgba(94, 106, 109, 0.20);
             background: #FFF9F4;
@@ -35,7 +37,8 @@
 
         .tab-active {
             border: none;
-            padding: 12px 24px;
+            padding: 12px 12px;
+            max-width: 220px;
             border-radius: 32px;
             border: 1px solid rgba(94, 106, 109, 0.20);
             background: #FF8225;
@@ -48,6 +51,72 @@
 
         span {
             display: none;
+        }
+    }
+
+    // Responsive styles
+    @media (max-width: 1024px) {
+        .heading {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .tabs {
+            .tab, .tab-active {
+                padding: 8px 20px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .heading {
+            font-size: 36px;
+            line-height: 44px;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 22px;
+            max-width: 100%; // Full width text on smaller screens
+            padding: 0 20px;
+        }
+
+        .tabs {
+            margin-top: 24px;
+
+            .tab, .tab-active {
+                padding: 8px 16px;
+                max-width: 120px;
+                font-size: 12px;
+                margin: 0 8px;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .heading {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 16px;
+        }
+
+        .tabs {
+            .tab, .tab-active {
+                padding: 6px 12px;
+                font-size: 12px;
+                margin: 0 4px;
+            }
         }
     }
 }

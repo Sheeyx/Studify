@@ -37,7 +37,7 @@ function App() {
               <HeroSection />
               <WhyStudify />
               <HowWorks />
-              {/* <AboutCompany /> */}
+              <AboutCompany />
               {/* <PricePackage /> */}
               {/* <OurResults /> */}
               {/* <CustomerReview /> */}
