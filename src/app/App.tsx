@@ -35,8 +35,8 @@ function App() {
           element={
             <>
               <HeroSection />
-              {/* <WhyStudify />
-              <HowWorks />
+              <WhyStudify />
+              {/* <HowWorks />
               <AboutCompany />
               <PricePackage />
               <OurResults />
