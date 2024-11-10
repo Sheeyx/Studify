@@ -41,7 +41,7 @@ function App() {
               <PricePackage />
               <OurResults />
               <CustomerReview />
-              {/* <ContactUs /> */}
+              <ContactUs />
               {/* <FAQ /> */}
               {/* <Footer /> */}
             </>
