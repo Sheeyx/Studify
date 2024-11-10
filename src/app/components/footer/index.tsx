@@ -7,7 +7,7 @@ import { Container } from '@mui/material';
 
 const Footer = () => {
     return (
-        <Container className="footer">
+        <Box className="footer container">
             <Grid>
             <svg width="167" height="56" viewBox="0 0 167 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="56" height="56" rx="16" fill="#FF8225"/>
@@ -46,7 +46,7 @@ const Footer = () => {
                     </Grid>
                 </Grid>
             </Grid>
-        </Container>
+        </Box>
     );
 };
 

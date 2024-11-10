@@ -36,14 +36,14 @@ function App() {
             <>
               <HeroSection />
               <WhyStudify />
-              <HowWorks />
+              <HowWorks />  
               <AboutCompany />
               <PricePackage />
               <OurResults />
               <CustomerReview />
               <ContactUs />
               <FAQ />
-              {/* <Footer /> */}
+              <Footer />
             </>
           }
         />
