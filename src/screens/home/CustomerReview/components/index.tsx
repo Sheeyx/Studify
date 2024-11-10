@@ -15,23 +15,29 @@ const VideoCard: React.FC<VideoCardProps> = ({ name, university, videoUrl, descr
 
   const handlePlayButtonClick = () => {
     setIsPlaying(true);
-
     if (iframeRef.current) {
       const iframe = iframeRef.current;
-      // Send a postMessage to the iframe to start playing the video
       iframe.contentWindow?.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     }
   };
 
   return (
-    <Box sx={{ maxWidth: 365}}>
-      <Box sx={{ position: 'relative', width: 345, height: 480, borderRadius: "20px"}} >
+    <Box sx={{ maxWidth: { xs: '100%', sm: 345, md: 365 }, margin: '0 auto' }}>
+      <Box
+        sx={{
+          position: 'relative',
+          width: { xs: '100%', sm: 345 },
+          height: { xs: 240, sm: 320, md: 480 },
+          borderRadius: '20px',
+          overflow: 'hidden',
+        }}
+      >
         {/* YouTube iframe */}
         <iframe
           ref={iframeRef}
-          width="345"
-          height="480"
-          src={`${videoUrl}?enablejsapi=1`} // enable YouTube iframe API
+          width="100%"
+          height="100%"
+          src={`${videoUrl}?enablejsapi=1`}
           title={name}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -58,7 +64,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ name, university, videoUrl, descr
           </IconButton>
         )}
       </Box>
-      <Box mt={3}>
+      <Box mt={2} textAlign="center">
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
@@ -77,19 +83,19 @@ const videoData = [
   {
     name: 'Olivia Harrison',
     university: 'Student of Yale University',
-    videoUrl: 'https://www.youtube.com/embed/VTsGRGeBj98', // Replace with actual video link
+    videoUrl: 'https://www.youtube.com/embed/VTsGRGeBj98',
     description: '',
   },
   {
     name: 'Isabella Davenport',
     university: 'Student of Yonsei University',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual video link
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     description: '',
   },
   {
     name: 'Henry Lancaster',
     university: 'Winner of National Scholarship',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual video link
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     description: '',
   },
 ];
@@ -99,10 +105,12 @@ const VideoCardList: React.FC = () => {
     <Box
       sx={{
         display: 'flex',
+        flexDirection: { xs: 'column', sm: 'row' },
         justifyContent: 'space-around',
-        gap: 3,
+        alignItems: 'center',
+        gap: { xs: 2, sm: 3 },
         flexWrap: 'wrap',
-        padding: 3,
+        padding: { xs: 2, sm: 3, md: 4 },
       }}
     >
       {videoData.map((video, index) => (

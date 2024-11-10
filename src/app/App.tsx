@@ -40,7 +40,7 @@ function App() {
               <AboutCompany />
               <PricePackage />
               <OurResults />
-              {/* <CustomerReview /> */}
+              <CustomerReview />
               {/* <ContactUs /> */}
               {/* <FAQ /> */}
               {/* <Footer /> */}

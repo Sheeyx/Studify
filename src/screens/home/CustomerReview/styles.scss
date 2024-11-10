@@ -1,6 +1,6 @@
 .customer-review {
     .heading {
-        color:  #FF8225;
+        color: #FF8225;
         text-align: center;
         font-size: 48px;
         font-weight: 500;
@@ -9,7 +9,7 @@
     }
 
     .text {
-        color:  #5E6A6D;
+        color: #5E6A6D;
         width: 564px;
         margin: 0 auto;
         margin-top: 24px;
@@ -19,5 +19,43 @@
         line-height: 24px;
         letter-spacing: -0.18px;
     }
-    
+
+    @media (max-width: 1024px) {
+        .heading {
+            font-size: 36px;
+            line-height: 44px;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 22px;
+            width: 480px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .heading {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        .text {
+            font-size: 15px;
+            line-height: 20px;
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .heading {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 18px;
+            width: 100%;
+        }
+    }
 }
