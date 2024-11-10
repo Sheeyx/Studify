@@ -39,7 +39,7 @@ function App() {
               <HowWorks />
               <AboutCompany />
               <PricePackage />
-              {/* <OurResults /> */}
+              <OurResults />
               {/* <CustomerReview /> */}
               {/* <ContactUs /> */}
               {/* <FAQ /> */}

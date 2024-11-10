@@ -1,10 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Correct CSS imports for Swiper
-import 'swiper/css';  // Core Swiper styles
-import 'swiper/css/autoplay';  // Styles for the Autoplay module
-import { Autoplay } from 'swiper/modules';  // Import the Autoplay module
-import image1 from '../../../../../assets/uni-photo.jpeg';  // Import the image
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import { Autoplay } from 'swiper/modules';
+import image1 from '../../../../../assets/uni-photo.jpeg';
 import "./styles.scss";
 
 const ResultsSwiper = () => {
@@ -12,26 +11,44 @@ const ResultsSwiper = () => {
     image1, image1, image1, image1,
     image1, image1, image1, image1,
     image1, image1, image1, image1,
-  ]; // Array of images
+  ];
 
   return (
     <div className="results-swiper">
       <Swiper
-        spaceBetween={30}       // Space between images
-        slidesPerView={4}       // Show 4 images at a time
-        slidesPerGroup={1}      // Move one image at a time
-        loop={true}             // Enables infinite loop
-        modules={[Autoplay]}    // Pass the Autoplay module
+        spaceBetween={30}
+        slidesPerView={4}
+        slidesPerGroup={1}
+        loop={true}
+        modules={[Autoplay]}
         autoplay={{
-          delay: 3000,          // Transition every 3 seconds
+          delay: 3000,
           disableOnInteraction: false,
         }}
-        speed={800}             // Speed of the transition in ms
+        speed={800}
+        breakpoints={{
+          320: {            // For very small screens
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {            // For small screens
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          768: {            // For tablets
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {           // For desktops
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div className='box'>
-                <img src={image} alt={`Slide ${index}`}/>
+                <img src={image} alt={`Slide ${index}`} />
             </div>
           </SwiperSlide>
         ))}
