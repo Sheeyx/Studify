@@ -1,6 +1,6 @@
 .faq {
     .heading {
-        color:  #FF8225;
+        color: #FF8225;
         text-align: left;
         font-size: 48px;
         font-weight: 500;
@@ -9,7 +9,7 @@
     }
 
     .text {
-        color:  #5E6A6D;
+        color: #5E6A6D;
         width: 564px;
         margin-top: 24px;
         font-size: 18px;
@@ -29,5 +29,65 @@
         border: 1px solid rgba(94, 106, 109, 0.20);
         background: #FFF;
         text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+        .heading {
+            font-size: 36px;
+            line-height: 44px;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 22px;
+            width: 100%;
+        }
+
+        .contact-us {
+            max-width: 280px;
+            padding: 24px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .heading {
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .text {
+            font-size: 15px;
+            line-height: 20px;
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-us {
+            max-width: 100%;
+            padding: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .heading {
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .text {
+            font-size: 14px;
+            line-height: 18px;
+            width: 100%;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .contact-us {
+            padding: 16px;
+            max-width: 100%;
+        }
     }
 }
