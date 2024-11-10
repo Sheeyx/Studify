@@ -23,5 +23,11 @@
         letter-spacing: -0.18px;
         text-align: left;
     }
+
+    @media (max-width: 1024px) {
+        .numbers , .text-line {
+            text-align: center;
+        }
+    }
 }
 

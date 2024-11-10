@@ -61,19 +61,19 @@ const OurJourney = () => {
       </Grid>
 
       <Grid container justifyContent="space-between" spacing={2} style={{ marginTop: 50 }}>
-      <Grid item xs={6} sm={4} md={2}>
+      <Grid item xs={12} sm={6} md={2}>
         <Typography className="numbers" variant="h5" align="center">5+</Typography>
         <Typography className="text-line" variant="body2" align="center">Years experience</Typography>
       </Grid>
-      <Grid item xs={6} sm={4} md={2}>
+      <Grid item xs={12} sm={6} md={2}>
         <Typography className="numbers" variant="h5" align="center">20+</Typography>
         <Typography className="text-line" variant="body2" align="center">Partner universities</Typography>
       </Grid>
-      <Grid item xs={6} sm={4} md={2}>
+      <Grid item xs={12} sm={6} md={2}>
         <Typography className="numbers" variant="h5" align="center">200+</Typography>
         <Typography className="text-line" variant="body2" align="center">Happy customers</Typography>
       </Grid>
-      <Grid item xs={6} sm={4} md={2}>
+      <Grid item xs={12} sm={6} md={2}>
         <Typography className="numbers" variant="h5" align="center">4</Typography>
         <Typography className="text-line" variant="body2" align="center">Branches</Typography>
       </Grid>

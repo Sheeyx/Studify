@@ -38,7 +38,7 @@ function App() {
               <WhyStudify />
               <HowWorks />
               <AboutCompany />
-              {/* <PricePackage /> */}
+              <PricePackage />
               {/* <OurResults /> */}
               {/* <CustomerReview /> */}
               {/* <ContactUs /> */}
