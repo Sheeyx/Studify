@@ -13,4 +13,16 @@
             object-fit: cover;
         }
     }
+      
 }
+
+.no-data-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; // Full viewport height for vertical centering
+    color: #FF8225;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
