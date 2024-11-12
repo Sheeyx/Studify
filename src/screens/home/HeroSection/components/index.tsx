@@ -41,7 +41,7 @@ const PartnerCarousel = () => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="box">
+            <div className="box-img">
               <img src={image} alt={`Slide ${index}`} />
             </div>
           </SwiperSlide>
