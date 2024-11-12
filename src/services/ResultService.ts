@@ -1,7 +1,7 @@
 import axios from "axios";
 import { serverApi } from "../libs/types/config";
 export interface Result {
-    resultImages:File
+    resultImages:string
     _id:string
 }
 export interface ResultInput {
