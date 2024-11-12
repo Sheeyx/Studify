@@ -41,7 +41,7 @@ const AdminDashboard: React.FC = () => {
           <NavLink to="statistics" className={({ isActive }) => (isActive ? "active" : "")}>Statistics</NavLink>
           <NavLink to="article" className={({ isActive }) => (isActive ? "active" : "")}>Article</NavLink>
           <NavLink to="faq" className={({ isActive }) => (isActive ? "active" : "")}>FAQ</NavLink>
-          <button style={{marginTop:"320px"}} onClick={handleLogout} className="logout-button">Logout</button> {/* Logout button */}
+          <button style={{marginTop:"120px"}} onClick={handleLogout} className="logout-button">Logout</button> {/* Logout button */}
         </nav>
       </aside>
       <main className="content">
