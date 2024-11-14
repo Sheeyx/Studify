@@ -107,44 +107,54 @@ const ContactUs: React.FC = () => {
 
                 {/* Right Side - Contact Info */}
                 <Box className="contact-info">
-                    <Box className="info-item">
-                        <Box>
-                            <InstagramIcon />
+                    <a href="https://www.instagram.com/studify.uz" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                        <Box className="info-item">
+                            <Box>
+                                <InstagramIcon />
+                            </Box>
+                            <Box>
+                                <Typography variant="body1" className="info-item_text">Instagram</Typography>
+                                <Typography variant="body2">@studify.uz</Typography>
+                            </Box>
                         </Box>
-                        <Box>
-                            <Typography variant="body1" className='info-item_text'>Instagram</Typography>
-                            <Typography variant="body2">@studify.uz</Typography>
+                    </a>
+                    <a href="https://t.me/studify.uz" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                        <Box className="info-item">
+                            <Box>
+                                <TelegramIcon />
+                            </Box>
+                            <Box>
+                                <Typography variant="body1" className="info-item_text">Telegram</Typography>
+                                <Typography variant="body2">@studify.uz</Typography>
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box className="info-item">
-                        <Box>
-                            <TelegramIcon />
+                    </a>
+                    <a href="mailto:info@studify.uz" style={{ textDecoration: 'none' }}>
+                        <Box className="info-item">
+                            <Box>
+                                <EmailIcon />
+                            </Box>
+                            <Box>
+                                <Typography variant="body1" className="info-item_text">Email</Typography>
+                                <Typography variant="body2">info@studify.uz</Typography>
+                            </Box>
                         </Box>
-                        <Box>
-                            <Typography variant="body1" className='info-item_text'>Telegram</Typography>
-                            <Typography variant="body2">@studify.uz</Typography>
+                    </a>
+                    <a href="tel:+998886581000" style={{ textDecoration: 'none' }}>
+                        <Box className="info-item">
+                            <Box>
+                                <PhoneIcon />
+                            </Box>
+                            <Box>
+                                <Typography variant="body1" className="info-item_text">Contact number</Typography>
+                                <Typography variant="body2">+998 88 658 1000</Typography>
+                                <Typography variant="body2">+998 88 658 1000</Typography>
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box className="info-item">
-                        <Box>
-                            <EmailIcon />
-                        </Box>
-                        <Box>
-                            <Typography variant="body1" className='info-item_text'>Email</Typography>
-                            <Typography variant="body2">info@studify.uz</Typography>
-                        </Box>
-                    </Box>
-                    <Box className="info-item">
-                        <Box>
-                            <PhoneIcon />
-                        </Box>
-                        <Box>
-                            <Typography variant="body1" className='info-item_text'>Contact number</Typography>
-                            <Typography variant="body2">+998 88 658 1000</Typography>
-                            <Typography variant="body2">+998 88 658 1000</Typography>
-                        </Box>
-                    </Box>
+                    </a>
                 </Box>
+
+
             </Box>
 
             {/* Snackbar Notification */}
