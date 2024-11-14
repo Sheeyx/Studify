@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
+import { Modal, Box } from '@mui/material';
 import "./styles.scss";
 import ResultService, { Result } from '../../../../../services/ResultService';
 import { serverApi } from '../../../../../libs/types/config';
@@ -11,6 +12,8 @@ const ResultsSwiper = () => {
   const [results, setResults] = useState<Result[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [open, setOpen] = useState<boolean>(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchResults = async () => {
@@ -28,6 +31,16 @@ const ResultsSwiper = () => {
 
     fetchResults();
   }, []);
+
+  const handleImageClick = (imageUrl: string) => {
+    setSelectedImage(imageUrl);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedImage(null);
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -63,12 +76,31 @@ const ResultsSwiper = () => {
       >
         {results.map((result) => (
           <SwiperSlide key={result._id}>
-            <div className="box">
+            <div className="box" onClick={() => handleImageClick(`${serverApi}/${result.resultImages}`)}>
               <img src={`${serverApi}/${result.resultImages}`} alt={`Result ${result._id}`} />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Modal for Image Preview */}
+      <Modal open={open} onClose={handleClose}>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            bgcolor: 'background.paper',
+            boxShadow: 24,
+            borderRadius: 8,
+            p: 2,
+            outline: 'none',
+          }}
+        >
+          <img src={selectedImage || ""} alt="Selected Result" style={{ maxWidth: '100%', maxHeight: '90vh' }} />
+        </Box>
+      </Modal>
     </div>
   );
 };

@@ -41,7 +41,7 @@ const OurTeam = () => {
           {teamMembers.map((member) => (
             <Grid item xs={12} sm={6} md={3} key={member._id} className='card'>
               <img src={`${`${serverApi}/${member.image}` || Photo}`} alt={member.name} className="team-photo" />
-              <Typography variant="h6" align="center">
+              <Typography variant="h6" align="center" className="team-name">
                 {member.name}
               </Typography>
               <Typography variant="body2" align="center" color="textSecondary">
