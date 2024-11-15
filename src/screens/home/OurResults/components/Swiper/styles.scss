@@ -1,29 +1,34 @@
 .results-swiper {
     margin-top: 48px;
-    .box {
-        width: 266px;
-        height: 300px;
-        border-radius: 24px;
-        box-shadow: 0px 4px 12px 8px rgba(255, 130, 37, 0.10);
+    .swiper-slide {
+        padding: 40px;
 
-        img {
-            cursor: pointer;
+        .box {
+            width: 266px;
+            height: 300px;
             border-radius: 24px;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            box-shadow: 0px 4px 12px 8px rgba(255, 130, 37, 0.2);
+        
+            img {
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
         }
+
+        .no-data-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30vh; // Full viewport height for vertical centering
+            color: #FF8225;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+          }
     }
+    
+    
       
 }
-
-.no-data-message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh; // Full viewport height for vertical centering
-    color: #FF8225;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-  }

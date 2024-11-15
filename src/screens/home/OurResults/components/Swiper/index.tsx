@@ -75,7 +75,7 @@ const ResultsSwiper = () => {
         }}
       >
         {results.map((result) => (
-          <SwiperSlide key={result._id}>
+          <SwiperSlide key={result._id} className='swiper-slide'>
             <div className="box" onClick={() => handleImageClick(`${serverApi}/${result.resultImages}`)}>
               <img src={`${serverApi}/${result.resultImages}`} alt={`Result ${result._id}`} />
             </div>
