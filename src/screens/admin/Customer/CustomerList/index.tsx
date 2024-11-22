@@ -76,7 +76,7 @@ const CustomerList: React.FC<CustomerListProps> = ({
             <tr>
               <th>#</th>
               <th>Name</th>
-              <th>Role</th>
+              {/* <th>Role</th> */}
               <th>Description</th>
               <th>Actions</th>
             </tr>
@@ -86,7 +86,7 @@ const CustomerList: React.FC<CustomerListProps> = ({
               <tr key={customer._id}>
                 <td>{index + 1}</td>
                 <td>{customer.name}</td>
-                <td>{customer.role}</td>
+                {/* <td>{customer.role}</td> */}
                 <td>{customer.description || "N/A"}</td>
                 <td className="customer-actions">
                 <IconButton

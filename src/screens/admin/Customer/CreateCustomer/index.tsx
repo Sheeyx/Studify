@@ -12,7 +12,7 @@ interface CreateCustomerProps {
 
 const CreateCustomer: React.FC<CreateCustomerProps> = ({ onCreateSuccess }) => {
   const [name, setName] = useState("");
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState("no role");
   const [description, setDescription] = useState("");
   const [videoUrl, setVideoUrl] = useState("");
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -43,7 +43,7 @@ const CreateCustomer: React.FC<CreateCustomerProps> = ({ onCreateSuccess }) => {
     <div className="create-customer-form">
       <h3>Create New Customer</h3>
       <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth margin="normal" />
-      <TextField label="Role" value={role} onChange={(e) => setRole(e.target.value)} fullWidth margin="normal" />
+      {/* <TextField label="Role" value={role} onChange={(e) => setRole(e.target.value)} fullWidth margin="normal" /> */}
       <TextField label="Description" value={description} onChange={(e) => setDescription(e.target.value)} fullWidth margin="normal" />
       <TextField
         label="YouTube Video URL"
