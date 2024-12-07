@@ -1,10 +1,13 @@
 .results-swiper {
     margin-top: 48px;
     .box-img {
-        width: 250px;
-        height: 100px;
+        width: 250px !important;
+        height: 100px !important;
+        object-fit: cover;
        
        img {
+        width: 250px !important;
+        height: 100px !important;
         object-fit: cover;
        }
     }

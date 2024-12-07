@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
-import image1 from '../../../../assets/hero-section/glasgow.png';
-import image2 from '../../../../assets/hero-section/harvard-university.png';
-import image3 from '../../../../assets/hero-section/university-sydney.png';
 import "./styles.scss";
+import UnilogosService from "../../../../services/UniLogosService";
+import { serverApi } from '../../../../libs/types/config';
 
 const PartnerCarousel = () => {
-  const images = [
-    image1, image2, image3,
-    image1, image2, image3,
-  ];
+  const [images, setImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const unilogosService = new UnilogosService();
+        const results = await unilogosService.getAllResults();
+        const fetchedImages = results.map((item: { unilogosImages: string }) => item.unilogosImages);
+        setImages(fetchedImages);
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+
+    fetchImages();
+  }, []);
 
   return (
     <div className="results-swiper">
@@ -42,7 +53,7 @@ const PartnerCarousel = () => {
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="box-img">
-              <img src={image} alt={`Slide ${index}`} />
+              <img src={`${serverApi}/${image}`} alt={`Slide ${index}`} />
             </div>
           </SwiperSlide>
         ))}
