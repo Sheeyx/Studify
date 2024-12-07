@@ -11,6 +11,7 @@ import FAQ from "./FAQ";
 import "./styles.scss";
 import MemberService from "../../services/MemberService";
 import Client from "./Client";
+import UniLogos from "./UniLogos";
 
 const AdminDashboard: React.FC = () => {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ const AdminDashboard: React.FC = () => {
           <NavLink to="mypage" className={({ isActive }) => (isActive ? "active" : "")}>My Page</NavLink>
           <NavLink to="client" className={({ isActive }) => (isActive ? "active" : "")}>Clients</NavLink>
           <NavLink to="result" className={({ isActive }) => (isActive ? "active" : "")}>Result</NavLink>
+          <NavLink to="unilogos" className={({ isActive }) => (isActive ? "active" : "")}>UniLogos</NavLink>
           <NavLink to="customer" className={({ isActive }) => (isActive ? "active" : "")}>Customer</NavLink>
           <NavLink to="team" className={({ isActive }) => (isActive ? "active" : "")}>Team</NavLink>
           <NavLink to="journey" className={({ isActive }) => (isActive ? "active" : "")}>Journey</NavLink>
@@ -49,6 +51,7 @@ const AdminDashboard: React.FC = () => {
           <Route path="mypage" element={<MyPage />} />
           <Route path="client" element={<Client />} />
           <Route path="result" element={<Result />} />
+          <Route path="unilogos" element={<UniLogos />} />
           <Route path="customer" element={<Customer />} />
           <Route path="team" element={<Team />} />
           <Route path="journey" element={<Journey />} />
