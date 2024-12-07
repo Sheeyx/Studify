@@ -28,7 +28,7 @@ const PartnerCarousel = () => {
     <div className="partner-carousel">
       <div className="carousel-container">
         <Swiper
-          spaceBetween={10}          // Minimal spacing between slides
+          spaceBetween={20}          // Increased spacing between slides
           loop={true}                // Enables infinite loop
           modules={[Autoplay]}       // Autoplay module for smooth scrolling
           autoplay={{
@@ -40,18 +40,23 @@ const PartnerCarousel = () => {
           breakpoints={{
             320: {
               slidesPerView: 1,      // 1 slide on extra small screens
+              spaceBetween: 10,      // 10px spacing on small screens
             },
             480: {
               slidesPerView: 2,      // 2 slides on small screens
+              spaceBetween: 15,      // 15px spacing
             },
             768: {
               slidesPerView: 3,      // 3 slides on medium screens
+              spaceBetween: 20,      // 20px spacing
             },
             1024: {
               slidesPerView: 4,      // 4 slides on larger screens
+              spaceBetween: 25,      // 25px spacing
             },
             1440: {
               slidesPerView: 5,      // 5 slides on extra-large screens
+              spaceBetween: 30,      // 30px spacing
             },
           }}
         >
