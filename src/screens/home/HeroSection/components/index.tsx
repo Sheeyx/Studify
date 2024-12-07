@@ -26,39 +26,42 @@ const PartnerCarousel = () => {
 
   return (
     <div className="results-swiper">
-      <Swiper
-        spaceBetween={20}        // Adjusted space between images for a smoother look
-        loop={true}              // Enables infinite loop
-        modules={[Autoplay]}     // Pass the Autoplay module
-        autoplay={{
-          delay: 2000,           // 2 seconds delay between transitions
-          disableOnInteraction: false,
-        }}
-        speed={500}              // Transition speed of 500ms for smooth movement
-        slidesPerView={1}        // Show only one slide at a time
-        breakpoints={{
-          320: {
-            slidesPerView: 1,    // 1 slide on extra small screens
-          },
-          640: {
-            slidesPerView: 2,    // 2 slides on small screens
-          },
-          768: {
-            slidesPerView: 3,    // 3 slides on medium screens
-          },
-          1024: {
-            slidesPerView: 4,    // 4 slides on large screens and above
-          },
-        }}
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div className="box-img">
-              <img src={`${serverApi}/${image}`} alt={`Slide ${index}`} />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="carousel-container">
+        <Swiper
+          spaceBetween={20}         // Space between images for a cleaner look
+          loop={true}               // Enables infinite loop
+          modules={[Autoplay]}      // Pass the Autoplay module
+          autoplay={{
+            delay: 3000,            // 3 seconds delay between transitions
+            disableOnInteraction: false, // Continue autoplay even after interaction
+          }}
+          speed={1500}              // Smooth transition speed (1.5 seconds)
+          slidesPerView={1}         // Show only one slide at a time
+          centeredSlides={false}    // No centering to allow natural slide behavior
+          breakpoints={{
+            320: {
+              slidesPerView: 1,     // 1 slide on extra small screens
+            },
+            640: {
+              slidesPerView: 2,     // 2 slides on small screens
+            },
+            768: {
+              slidesPerView: 3,     // 3 slides on medium screens
+            },
+            1260: {
+              slidesPerView: 4,     // 4 slides on large screens and above
+            },
+          }}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="box-img">
+                <img src={`${serverApi}/${image}`} alt={`Slide ${index}`} />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

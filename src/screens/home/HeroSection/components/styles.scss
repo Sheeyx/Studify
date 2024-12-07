@@ -1,11 +1,23 @@
 .results-swiper {
-    margin-top: 48px;
-    .box-img {
-       
-       img {
-        width: 250px !important;
-        height: 150px !important;
-        object-fit: cover;
-       }
+    .carousel-container {
+      width: 1280px; // Set the fixed container width
+      margin: 0 auto; // Center the container horizontally
+      position: relative; // For potential positioning tweaks
     }
-}
+  
+    .box-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; // Maintain aspect ratio for images
+      overflow: hidden;
+      border-radius: 10px; // Add subtle rounding for better aesthetics
+      img {
+        width: 250px;
+        height: 150px;
+        object-fit: cover; // Ensure images fill their container without distortion
+        transition: transform 0.5s ease; // Smooth hover effect
+      }
+    }
+  }
+  
