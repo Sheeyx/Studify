@@ -27,26 +27,27 @@ const PartnerCarousel = () => {
   return (
     <div className="results-swiper">
       <Swiper
-        spaceBetween={20}       // Adjusted space between images for a smoother look
-        loop={true}             // Enables infinite loop
-        modules={[Autoplay]}    // Pass the Autoplay module
+        spaceBetween={20}        // Adjusted space between images for a smoother look
+        loop={true}              // Enables infinite loop
+        modules={[Autoplay]}     // Pass the Autoplay module
         autoplay={{
-          delay: 0,             // No delay between transitions for continuous scroll
+          delay: 2000,           // 2 seconds delay between transitions
           disableOnInteraction: false,
         }}
-        speed={5000}            // Speed of the continuous transition
+        speed={500}              // Transition speed of 500ms for smooth movement
+        slidesPerView={1}        // Show only one slide at a time
         breakpoints={{
           320: {
-            slidesPerView: 1,   // 1 slide on extra small screens
+            slidesPerView: 1,    // 1 slide on extra small screens
           },
           640: {
-            slidesPerView: 2,   // 2 slides on small screens
+            slidesPerView: 2,    // 2 slides on small screens
           },
           768: {
-            slidesPerView: 3,   // 3 slides on medium screensd
+            slidesPerView: 3,    // 3 slides on medium screens
           },
           1024: {
-            slidesPerView: 4,   // 4 slides on large screens and above
+            slidesPerView: 4,    // 4 slides on large screens and above
           },
         }}
       >
