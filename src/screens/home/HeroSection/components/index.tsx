@@ -55,7 +55,7 @@ const PartnerCarousel = () => {
               spaceBetween: 25,      // 25px spacing
             },
             1440: {
-              slidesPerView: 5,      // 5 slides on extra-large screens
+              slidesPerView: 4,      // 5 slides on extra-large screens
               spaceBetween: 30,      // 30px spacing
             },
           }}
