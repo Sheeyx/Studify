@@ -25,31 +25,33 @@ const PartnerCarousel = () => {
   }, []);
 
   return (
-    <div className="results-swiper">
+    <div className="partner-carousel">
       <div className="carousel-container">
         <Swiper
-          spaceBetween={20}         // Space between images for a cleaner look
-          loop={true}               // Enables infinite loop
-          modules={[Autoplay]}      // Pass the Autoplay module
+          spaceBetween={10}          // Minimal spacing between slides
+          loop={true}                // Enables infinite loop
+          modules={[Autoplay]}       // Autoplay module for smooth scrolling
           autoplay={{
-            delay: 3000,            // 3 seconds delay between transitions
+            delay: 2000,             // 2 seconds delay between transitions
             disableOnInteraction: false, // Continue autoplay even after interaction
           }}
-          speed={1500}              // Smooth transition speed (1.5 seconds)
-          slidesPerView={1}         // Show only one slide at a time
-          centeredSlides={false}    // No centering to allow natural slide behavior
+          speed={2000}               // Slower transition speed for smooth movement (2 seconds)
+          slidesPerView={1}          // Start with 1 slide at a time
           breakpoints={{
             320: {
-              slidesPerView: 1,     // 1 slide on extra small screens
+              slidesPerView: 1,      // 1 slide on extra small screens
             },
-            640: {
-              slidesPerView: 2,     // 2 slides on small screens
+            480: {
+              slidesPerView: 2,      // 2 slides on small screens
             },
             768: {
-              slidesPerView: 3,     // 3 slides on medium screens
+              slidesPerView: 3,      // 3 slides on medium screens
             },
-            1260: {
-              slidesPerView: 4,     // 4 slides on large screens and above
+            1024: {
+              slidesPerView: 4,      // 4 slides on larger screens
+            },
+            1440: {
+              slidesPerView: 5,      // 5 slides on extra-large screens
             },
           }}
         >
