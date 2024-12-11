@@ -21,8 +21,17 @@ const MobileAccordion: React.FC = () => {
           <Typography>Consultation + Program</Typography>
         </AccordionSummary>
         <AccordionDetails>
+        <Typography className="section-title">Free Consultation:</Typography>
           <Typography>
-            Details about the consultation and program go here.
+          Receive expert advice and personalized guidance at no cost. We help you make well-informed decisions tailored to your educational goals, ensuring clarity before you take the next step in your academic journey.
+          </Typography>
+          <Typography className="section-title">Guaranteed Admission:</Typography>
+          <Typography>
+          With our extensive network of reputable partner universities, we maximize your chances of acceptance. From selecting the right program to finalizing your admission, we stand by your side, making every step smoother and more successful.
+          </Typography>
+          <Typography className="section-title">A to Z Support:</Typography>
+          <Typography>
+          From your first consultation to your arrival on campus, we cover it all. Our comprehensive support includes visa application, document submission, and even a warm welcome at the airport. We ensure that your transition to studying abroad is seamless and stress-free.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -64,7 +73,7 @@ const MobileAccordion: React.FC = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Admission details go here.
+          Once the ideal program is chosen, we move to the application process. Our team is here to help you every step of the way, from preparing required documents to filling out the application forms. We thoroughly review your materials to make sure everything is complete and meets the university’s standards. By offering insights and advice on application essays, recommendation letters, and additional requirements, we boost your chances of acceptance. We maintain close communication with our partner universities, ensuring a smooth and timely submission of your application. With our support, you can approach this critical phase with confidence.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -79,7 +88,7 @@ const MobileAccordion: React.FC = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Information about the visa application process goes here.
+          Securing a visa is one of the most important steps in your international education journey. After you've received your admission letter, we help guide you through the entire visa application process. We provide detailed instructions on the necessary documents, assist you in completing forms, and ensure that all legal and procedural requirements are met. Our team offers preparation tips for visa interviews and keeps you updated on any changes or additional information requested by the embassy. We understand how stressful this stage can be, which is why we handle the complexities, allowing you to focus on getting ready for your new life abroad.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -94,7 +103,7 @@ const MobileAccordion: React.FC = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Final congratulations message goes here.
+          Once your admission is confirmed and your visa is approved, it's time to celebrate the beginning of a new chapter in your life! You are now officially on your way to studying abroad, and we're here to ensure your final steps are as smooth as possible. Our support doesn’t stop at paperwork; we assist with pre-departure arrangements, providing guidance on travel, accommodation, and cultural orientation. Upon arrival, we offer services like airport pickup and help you settle into your new environment. From start to finish, Studify stands by you to make sure your transition is seamless. Your success is our celebration!
           </Typography>
         </AccordionDetails>
       </Accordion>
