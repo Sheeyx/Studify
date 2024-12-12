@@ -94,7 +94,7 @@ const ResultsSwiper = () => {
             bgcolor: 'background.paper',
             boxShadow: 24,
             borderRadius: 8,
-            p: 2,
+            p: 0,
             outline: 'none',
           }}
         >
