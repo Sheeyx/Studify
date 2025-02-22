@@ -5,7 +5,7 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 interface VideoCardProps {
     name: string;
     university: string;
-    videoUrl: string; // YouTube watch URL (e.g., https://www.youtube.com/watch?v=K1QYAoCnfeQ or shortened URL)
+    videoUrl: string; // YouTube watch URL (e.g., https://www.youtube.com/watch?v=K1QYAoCnfeQ, shortened, or shorts URL)
     description: string;
 }
 
@@ -14,9 +14,9 @@ const VideoCard: React.FC<VideoCardProps> = ({ name, university, videoUrl, descr
     const iframeRef = useRef<HTMLIFrameElement>(null);
 
     const getEmbedUrl = (url: string): string => {
-        // Updated regex to match both standard and shortened YouTube URLs
+        // Updated regex to match standard, shortened, and shorts YouTube URLs
         const videoIdMatch = url.match(
-            /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([^?&]+)/
+            /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|shorts\/)|youtu\.be\/)([^?&]+)/,
         );
         return videoIdMatch
             ? `https://www.youtube.com/embed/${videoIdMatch[1]}?enablejsapi=1`
@@ -44,12 +44,11 @@ const VideoCard: React.FC<VideoCardProps> = ({ name, university, videoUrl, descr
                     overflow: 'hidden',
                 }}
             >
-                {/* YouTube iframe */}
                 <iframe
                     ref={iframeRef}
                     width="100%"
                     height="100%"
-                    src={getEmbedUrl(videoUrl)} // Embed URL
+                    src={getEmbedUrl(videoUrl)}
                     title={name}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -58,7 +57,6 @@ const VideoCard: React.FC<VideoCardProps> = ({ name, university, videoUrl, descr
                         borderRadius: '20px',
                     }}
                 />
-                {/* Play button overlay */}
                 {!isPlaying && (
                     <IconButton
                         sx={{
