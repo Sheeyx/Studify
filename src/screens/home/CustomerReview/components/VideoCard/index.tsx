@@ -5,16 +5,19 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 interface VideoCardProps {
     name: string;
     university: string;
-    videoUrl: string; // YouTube watch URL (e.g., https://www.youtube.com/watch?v=K1QYAoCnfeQ)
+    videoUrl: string; // YouTube watch URL (e.g., https://www.youtube.com/watch?v=K1QYAoCnfeQ or shortened URL)
     description: string;
 }
 
 const VideoCard: React.FC<VideoCardProps> = ({ name, university, videoUrl, description }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const iframeRef = useRef<HTMLIFrameElement>(null);
+
     const getEmbedUrl = (url: string): string => {
-        // Convert YouTube watch URL to embed URL
-        const videoIdMatch = url.match(/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([^&]+)/);
+        // Updated regex to match both standard and shortened YouTube URLs
+        const videoIdMatch = url.match(
+            /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([^?&]+)/
+        );
         return videoIdMatch
             ? `https://www.youtube.com/embed/${videoIdMatch[1]}?enablejsapi=1`
             : url;
