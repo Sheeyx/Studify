@@ -18,53 +18,37 @@ const CustomerList: React.FC<CustomerListProps> = ({
   onRemove,
 }) => {
   const [editingCustomer, setEditingCustomer] = useState<Customer | null>(null);
-  const [videoFile, setVideoFile] = useState<File | null>(null);
 
   const handleEditClick = (customer: Customer) => {
     setEditingCustomer(customer);
-    setVideoFile(null); // Reset video file on new edit click
   };
 
   const handleCancelEdit = () => {
     setEditingCustomer(null);
-    setVideoFile(null);
   };
 
   const handleSaveEdit = async () => {
     if (editingCustomer) {
       try {
         const customerService = new CustomerService();
-
-        // Prepare the input data for the service call
         const customerUpdateInput: CustomerUpdateInput = {
           _id: editingCustomer._id,
           name: editingCustomer.name,
           role: editingCustomer.role,
           description: editingCustomer.description,
-          video: videoFile
-            ? URL.createObjectURL(videoFile)
-            : editingCustomer.video,
+          video: editingCustomer.video, // Now updated via YouTube URL text field
         };
 
-        // Call the update service
         const updatedCustomer = await customerService.updateCustomer(
           editingCustomer._id,
-          customerUpdateInput,
-          videoFile ?? undefined
+          customerUpdateInput
         );
 
-        onEdit(updatedCustomer); // Pass updated customer to the parent
+        onEdit(updatedCustomer);
         setEditingCustomer(null);
-        setVideoFile(null);
       } catch (error) {
         console.error("Failed to update customer:", error);
       }
-    }
-  };
-
-  const handleVideoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files && event.target.files[0]) {
-      setVideoFile(event.target.files[0]);
     }
   };
 
@@ -89,32 +73,32 @@ const CustomerList: React.FC<CustomerListProps> = ({
                 {/* <td>{customer.role}</td> */}
                 <td>{customer.description || "N/A"}</td>
                 <td className="customer-actions">
-                <IconButton
-        onClick={() => handleEditClick(customer)}
-        aria-label="edit"
-        color="primary"
-        style={{
-          padding: "4px", // Smaller padding
-          fontSize: "small", // Adjust icon size
-          backgroundColor: "transparent",
-        }}
-        className="icon-button"
-      >
-        <EditIcon fontSize="small" />
-      </IconButton>
-      <IconButton
-        onClick={() => onRemove(customer._id)}
-        aria-label="delete"
-        color="secondary"
-        style={{
-          padding: "4px",
-          fontSize: "small",
-          backgroundColor: "transparent",
-        }}
-        className="icon-button"
-      >
-        <DeleteIcon fontSize="small" />
-      </IconButton>
+                  <IconButton
+                    onClick={() => handleEditClick(customer)}
+                    aria-label="edit"
+                    color="primary"
+                    style={{
+                      padding: "4px",
+                      fontSize: "small",
+                      backgroundColor: "transparent",
+                    }}
+                    className="icon-button"
+                  >
+                    <EditIcon fontSize="small" />
+                  </IconButton>
+                  <IconButton
+                    onClick={() => onRemove(customer._id)}
+                    aria-label="delete"
+                    color="secondary"
+                    style={{
+                      padding: "4px",
+                      fontSize: "small",
+                      backgroundColor: "transparent",
+                    }}
+                    className="icon-button"
+                  >
+                    <DeleteIcon fontSize="small" />
+                  </IconButton>
                 </td>
               </tr>
             ))}
@@ -153,34 +137,23 @@ const CustomerList: React.FC<CustomerListProps> = ({
             fullWidth
             margin="normal"
           />
-          <div className="video-upload">
-            <label htmlFor="video-upload-input">Upload Video:</label>
-            <input
-              type="file"
-              id="video-upload-input"
-              accept="video/*"
-              onChange={handleVideoChange}
-            />
-            {videoFile && (
-              <div className="video-preview">
-                <video width="300" controls>
-                  <source
-                    src={URL.createObjectURL(videoFile)}
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            )}
-          </div>
-          <div className="edit-buttons" style={{  display: "flex",gap: "20px" }}>
+          <TextField
+            label="YouTube Video URL"
+            value={editingCustomer.video || ""}
+            onChange={(e) =>
+              setEditingCustomer({ ...editingCustomer, video: e.target.value })
+            }
+            fullWidth
+            margin="normal"
+          />
+          <div className="edit-buttons" style={{ display: "flex", gap: "20px" }}>
             <Button
               variant="text"
               style={{
                 color: "white",
                 backgroundColor: "#ff8225",
                 width: "80px",
-                textTransform: "none", // Keeps the text in normal case
+                textTransform: "none",
               }}
               onClick={handleSaveEdit}
             >
