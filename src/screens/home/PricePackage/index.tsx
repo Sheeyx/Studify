@@ -12,7 +12,6 @@ export default function PricePackage() {
                 <Grid className='card' item md={3.5} sm={2}>
                     <Typography className='package' variant="h5" align="left">Basic</Typography>
                     <Typography className='text-line' variant="body2" align="left">Ideal for those who have experience dealing with starting new life abroad.</Typography>
-                    <Typography className='text-line' variant="body2" align="left"><span>$399</span>/ per customer</Typography>
                     <Divider className='divider' />
                     <List>
                         <ListItem>
@@ -33,7 +32,6 @@ export default function PricePackage() {
                 <Grid className='card' item md={3.5} sm={2}>
                     <Typography className='package' variant="h5" align="left">Premium</Typography>
                     <Typography className='text-line' variant="body2" align="left">Ideal for those who have experience dealing with starting new life abroad.</Typography>
-                    <Typography className='text-line' variant="body2" align="left"><span>$799</span>/ per customer</Typography>
                     <Divider className='divider' />
                     <List>
                         <ListItem>
@@ -54,7 +52,6 @@ export default function PricePackage() {
                 <Grid className='card' item md={3.5} sm={2}>
                     <Typography className='package' variant="h5" align="left">Custom</Typography>
                     <Typography className='text-line' variant="body2" align="left">Ideal for those who have experience dealing with starting new life abroad.</Typography>
-                    <Typography className='text-line' variant="body2" align="left"><span>$399</span>/ per customer</Typography>
                     <Divider className='divider' />
                     <List>
                         <ListItem>
