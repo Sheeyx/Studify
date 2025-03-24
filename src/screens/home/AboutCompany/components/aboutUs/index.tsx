@@ -33,6 +33,8 @@ const OurJourney = () => {
     fetchJourneyData();
   }, []);
 
+  console.log(journeyData, "journeyData");
+  
   if (loading) return <CircularProgress style={{ display: 'block', margin: 'auto', marginTop: 50 }} />;
   if (error) return <Typography color="error" align="center">{error}</Typography>;
 
@@ -49,15 +51,15 @@ const OurJourney = () => {
             {firstColumn.map((item: Journey, index) => (
               <TimelineItem key={index}>
                 <TimelineOppositeContent className="text-box">
-                  <Typography color="textSecondary" textAlign="left">{item.year}</Typography>
+                  <Typography color="textSecondary" textAlign="left">{item.journeyYear}</Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot />
+                  <TimelineDot style={{ backgroundColor: index === 0 ? '#FF8225' : '' }} />
                   {index < firstColumn.length - 1 && <TimelineConnector />}
                 </TimelineSeparator>
                 <TimelineContent>
-                  <Typography variant="h6">{item.event}</Typography>
-                  <Typography>{item.description}</Typography>
+                  <Typography variant="h6" style={{ marginTop: "-5px" }}>{item.journeyTitle}</Typography>
+                  <Typography>{item.journeyDesc}</Typography>
                 </TimelineContent>
               </TimelineItem>
             ))}
@@ -70,15 +72,15 @@ const OurJourney = () => {
             {secondColumn.map((item: Journey, index) => (
               <TimelineItem key={index}>
                 <TimelineOppositeContent className="text-box">
-                  <Typography color="textSecondary" textAlign="left">{item.year}</Typography>
+                  <Typography color="textSecondary" textAlign="left">{item.journeyYear}</Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot />
+                  <TimelineDot/>
                   {index < secondColumn.length - 1 && <TimelineConnector />}
                 </TimelineSeparator>
                 <TimelineContent>
-                  <Typography variant="h6">{item.event}</Typography>
-                  <Typography>{item.description}</Typography>
+                  <Typography variant="h6" style={{ marginTop: "-5px" }}>{item.journeyTitle}</Typography>
+                  <Typography>{item.journeyDesc}</Typography>
                 </TimelineContent>
               </TimelineItem>
             ))}

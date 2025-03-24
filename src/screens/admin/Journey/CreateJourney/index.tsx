@@ -9,6 +9,7 @@ interface CreateJourneyProps {
 }
 
 const CreateJourney: React.FC<CreateJourneyProps> = ({ onCreateSuccess }) => {
+  const [journeyTitle, setJourneyTitle] = useState("");
   const [journeyYear, setJourneyYear] = useState("");
   const [journeyDesc, setJourneyDesc] = useState("");
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -16,7 +17,7 @@ const CreateJourney: React.FC<CreateJourneyProps> = ({ onCreateSuccess }) => {
   const handleCreateJourney = async () => {
     try {
       const journeyService = new JourneyService();
-      const journeyInput: JourneyInput = { journeyYear, journeyDesc };
+      const journeyInput: JourneyInput = { journeyTitle, journeyYear, journeyDesc };
 
       const newJourney = await journeyService.createJourney(journeyInput);
       onCreateSuccess(newJourney); // Pass created journey to parent
@@ -24,6 +25,7 @@ const CreateJourney: React.FC<CreateJourneyProps> = ({ onCreateSuccess }) => {
       setOpenSnackbar(true); // Show success snackbar
 
       // Reset form fields
+      setJourneyTitle("");
       setJourneyYear("");
       setJourneyDesc("");
     } catch (error) {
@@ -36,6 +38,13 @@ const CreateJourney: React.FC<CreateJourneyProps> = ({ onCreateSuccess }) => {
   return (
     <div className="create-journey-form">
       <h3>Create New Journey</h3>
+      <TextField
+        label="Title"
+        value={journeyTitle}
+        onChange={(e) => setJourneyTitle(e.target.value)}
+        fullWidth
+        margin="normal"
+      />
       <TextField
         label="Year"
         value={journeyYear}
