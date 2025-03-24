@@ -13,6 +13,9 @@ export interface JourneyInput {
   }
   
   export interface Journey {
+    year: string;
+    description: string;
+    event: string;
     _id: string;
     journeyYear: string;
     journeyDesc: string;

@@ -1,9 +1,9 @@
 import React from 'react'
 import "./styles.scss"
 import { Box, Container, Grid, ListItem, Typography } from '@mui/material';
-import File from "../../../assets/why-studify/file.png"
-import OnBoarding from "../../../assets/why-studify/onboarding.png"
-import User from "../../../assets/why-studify/user-headset.png"
+import File from "../../../assets/why-studify/file.svg";
+import OnBoarding from "../../../assets/why-studify/onboarding.svg";
+import User from "../../../assets/why-studify/user.svg";
 
 export default function WhyStudify() {
   return (

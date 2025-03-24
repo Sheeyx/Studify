@@ -44,7 +44,7 @@ export default function ApplicationSteps() {
       <Box className = "show-panel" sx={{ width: '55%', padding: '16px', backgroundColor: '#FFFFFF', borderRadius: '8px' }}>
         {expanded === 'panel1' && (
           <Box>
-            <Typography variant="h6">Consultation + Program</Typography>
+            <Typography variant="h6" className='title'>Consultation + Program</Typography>
             <Typography sx={{ fontWeight: 'bold', marginTop: '16px' }}>Free Consultation</Typography>
             <Typography>Receive expert advice and personalized guidance at no cost. We help you make well-informed decisions tailored to your educational goals, ensuring clarity before you take the next step in your academic journey.</Typography>
             <Typography sx={{ fontWeight: 'bold', marginTop: '16px' }}>Guaranteed Admission:</Typography>
@@ -57,7 +57,7 @@ export default function ApplicationSteps() {
         )}
         {expanded === 'panel2' && (
           <Box>
-            <Typography variant="h6">Application Process</Typography>
+            <Typography variant="h6" className='title'>Application Process</Typography>
             <Typography>
               Once you've decided on your program, we handle the paperwork and guide you through the detailed application process.
             </Typography>
@@ -73,19 +73,19 @@ export default function ApplicationSteps() {
         )}
         {expanded === 'panel3' && (
           <Box>
-            <Typography variant="h6">Admission</Typography>
+            <Typography variant="h6" className='title'>Admission</Typography>
             <Typography>Once the ideal program is chosen, we move to the application process. Our team is here to help you every step of the way, from preparing required documents to filling out the application forms. We thoroughly review your materials to make sure everything is complete and meets the university’s standards. By offering insights and advice on application essays, recommendation letters, and additional requirements, we boost your chances of acceptance. We maintain close communication with our partner universities, ensuring a smooth and timely submission of your application. With our support, you can approach this critical phase with confidence.</Typography>
           </Box>
         )}
         {expanded === 'panel4' && (
           <Box>
-            <Typography variant="h6">Visa Application</Typography>
+            <Typography variant="h6" className='title'>Visa Application</Typography>
             <Typography>Securing a visa is one of the most important steps in your international education journey. After you've received your admission letter, we help guide you through the entire visa application process. We provide detailed instructions on the necessary documents, assist you in completing forms, and ensure that all legal and procedural requirements are met. Our team offers preparation tips for visa interviews and keeps you updated on any changes or additional information requested by the embassy. We understand how stressful this stage can be, which is why we handle the complexities, allowing you to focus on getting ready for your new life abroad.</Typography>
           </Box>
         )}
         {expanded === 'panel5' && (
           <Box>
-            <Typography variant="h6">Congratulations 🎉</Typography>
+            <Typography variant="h6" className='title'>Congratulations 🎉</Typography>
             <Typography>Once your admission is confirmed and your visa is approved, it's time to celebrate the beginning of a new chapter in your life! You are now officially on your way to studying abroad, and we're here to ensure your final steps are as smooth as possible. Our support doesn’t stop at paperwork; we assist with pre-departure arrangements, providing guidance on travel, accommodation, and cultural orientation. Upon arrival, we offer services like airport pickup and help you settle into your new environment. From start to finish, Studify stands by you to make sure your transition is seamless. Your success is our celebration!</Typography>
           </Box>
         )}
