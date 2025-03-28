@@ -3,14 +3,12 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Grid, Button, Typography, Box } from '@mui/material';
 import { useSpring, animated } from '@react-spring/web';
 import "./styles.scss";
-import Photo from "../../../assets/uni-photo.jpeg";
+import Photo from "../../../assets/hero-section/home.png";
 import PartnerCarousel from './components';
 
 export default function HeroSection() {
   const experienceProps = useSpring({ from: { number: 0 }, to: { number: 5 }, config: { duration: 2000 } });
   const successRateProps = useSpring({ from: { number: 0 }, to: { number: 99 }, config: { duration: 2000 } });
-
-  const AnimatedTypography = animated(Typography);
 
   return (
     <Box className="hero-section container">
@@ -27,23 +25,23 @@ export default function HeroSection() {
           </Button>
         </Grid>
 
-        <Grid item xs={12} md={6} className="hero-right">
+        <Grid item md={6} xs={12} className="hero-right">
           <Box className="image">
             <img src={Photo} alt="University" />
-          </Box>
-          <Box className="percentage">
-            <Box className="box">
-              {/* Use AnimatedTypography to work with react-spring */}
-              <AnimatedTypography className="number">
-                {experienceProps.number.to((n) => `${n.toFixed(0)}+`)}
-              </AnimatedTypography>
-              <Typography>Years of Experience</Typography>
+            <Box className="years-experience">
+              <Typography>
+                <animated.span>
+                  {experienceProps.number.to((n) => Math.round(n))}
+                </animated.span> years of experience
+              </Typography>
             </Box>
-            <Box className="box-circle">
-              <AnimatedTypography className="number">
-                {successRateProps.number.to((n) => `${n.toFixed(0)}%`)}
-              </AnimatedTypography>
-              <Typography>Success rate</Typography>
+            <Box className="success-rate">
+              <Typography className='title'>
+                <animated.span>
+                  {successRateProps.number.to((n) => Math.round(n))}
+                </animated.span>%
+              </Typography>
+              <Typography className='paragraph'> success rate</Typography>
             </Box>
           </Box>
         </Grid>
