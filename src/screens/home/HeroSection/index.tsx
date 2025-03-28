@@ -5,6 +5,8 @@ import { useSpring, animated } from '@react-spring/web';
 import "./styles.scss";
 import Photo from "../../../assets/hero-section/home.png";
 import PartnerCarousel from './components';
+import Telegram from "../../../assets/hero-section/tg.svg";
+
 
 export default function HeroSection() {
   const experienceProps = useSpring({ from: { number: 0 }, to: { number: 5 }, config: { duration: 2000 } });
@@ -20,9 +22,19 @@ export default function HeroSection() {
           <Typography variant="body1" className="hero-description">
             We know how to speed up the application process and help you save time and money.
           </Typography>
-          <Button variant="contained" className="hero-button" endIcon={<ArrowForwardIcon />}>
-            Free consultation
+          <Box className="btn">
+            <Button variant="contained" className="consultaion-btn" endIcon={<ArrowForwardIcon />}>
+              Free consultation
+            </Button>
+            <Button
+            variant="contained"
+            className="tg-btn"
+            onClick={() => window.open("https://t.me/studify_uz", "_blank")}
+          >
+            <img src={Telegram} alt="tg" />
           </Button>
+          </Box>
+          
         </Grid>
 
         <Grid item md={6} xs={12} className="hero-right">
