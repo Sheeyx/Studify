@@ -5,6 +5,10 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
+import Instagram from '../../../assets/contact/instagram.svg';
+import Telegram from '../../../assets/contact/Telegram.svg';
+import Contact from '../../../assets/contact/concact.svg';
+import Email from '../../../assets/contact/Email.svg';
 import { City } from '../../../libs/enums/message.enum';
 import MessageService from '../../../services/MessageService'; // Adjust the path as needed
 import { MessageInput } from '../../../libs/types/message'; // Adjust path if necessary
@@ -66,7 +70,7 @@ const ContactUs: React.FC = () => {
                 <Box className="contact-form">
                     <Box className="form-box">
                         <Typography variant="h6" className="form-box_title">
-                            Don’t worry, book your free consultation real quick
+                            Book your free consultation 
                         </Typography>
                         <TextField
                             label="Your name"
@@ -86,21 +90,6 @@ const ContactUs: React.FC = () => {
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
                         />
-                        <FormControl fullWidth margin="normal" variant="outlined" className="text-field">
-                            <InputLabel>Select your city</InputLabel>
-                            <Select
-                                label="Select your city"
-                                value={selectedCity}
-                                onChange={handleCityChange}
-                            >
-                                <MenuItem value=""><em>Select a city</em></MenuItem>
-                                {Object.values(City).map((city) => (
-                                    <MenuItem key={city} value={city}>
-                                        {city}
-                                    </MenuItem>
-                                ))}
-                            </Select>
-                        </FormControl>
                         <Button variant="contained" className="submit-button" onClick={handleSubmit}>Send</Button>
                     </Box>
                 </Box>
@@ -110,45 +99,45 @@ const ContactUs: React.FC = () => {
                     <a href="https://www.instagram.com/studify.uz" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                         <Box className="info-item">
                             <Box>
-                                <InstagramIcon />
+                                <img src={Instagram} alt="" />
                             </Box>
                             <Box>
                                 <Typography variant="body1" className="info-item_text">Instagram</Typography>
-                                <Typography variant="body2">@studify.uz</Typography>
+                                <Typography variant="body2" className='info-item_username'>@studify.uz</Typography>
                             </Box>
                         </Box>
                     </a>
                     <a href="https://t.me/studify_uz" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                         <Box className="info-item">
                             <Box>
-                                <TelegramIcon />
+                                <img src={Telegram} alt="" />
                             </Box>
                             <Box>
                                 <Typography variant="body1" className="info-item_text">Telegram</Typography>
-                                <Typography variant="body2">@studify.uz</Typography>
+                                <Typography variant="body2" className='info-item_username'>@studify_uz</Typography>
                             </Box>
                         </Box>
                     </a>
                     <a href="mailto:info@studify.uz" style={{ textDecoration: 'none' }}>
                         <Box className="info-item">
                             <Box>
-                                <EmailIcon />
+                                <img src={Email} alt="" />
                             </Box>
                             <Box>
                                 <Typography variant="body1" className="info-item_text">Email</Typography>
-                                <Typography variant="body2">info@studify.uz</Typography>
+                                <Typography variant="body2" className='info-item_username'>info@studify.uz</Typography>
                             </Box>
                         </Box>
                     </a>
                     <a href="tel:+998886581000" style={{ textDecoration: 'none' }}>
                         <Box className="info-item">
                             <Box>
-                                <PhoneIcon />
+                                <img src={Contact} alt="" />   
                             </Box>
                             <Box>
                                 <Typography variant="body1" className="info-item_text">Contact number</Typography>
-                                <Typography variant="body2">+998 88 658 1000</Typography>
-                                <Typography variant="body2">+998 88 658 1000</Typography>
+                                <Typography variant="body2" className='info-item_username'>+998 88 658 1000</Typography>
+                                <Typography variant="body2" className='info-item_username'>+998 88 658 1000</Typography>
                             </Box>
                         </Box>
                     </a>
