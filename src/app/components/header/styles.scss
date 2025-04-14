@@ -62,6 +62,51 @@
         color: white;
       }
     }
+
+  }
+
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 12px;
+    background: #FF8225;
+
+    .close-modal {
+      width: 40px;
+      height: 40px;
+      top: -15px;
+      right: -15px;
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact {
+      display: none;
+      width: 100%;
+      justify-content: center;
+      margin-top: 20px;
+      div {
+        width: 60px;
+        height: 60px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+      }
+    }
   }
   
   @keyframes slide-down {
@@ -74,8 +119,31 @@
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 1030px) {
+    .modal-content{
+      .contact-form-content{
+        .contact-form  {
+          width: 100%;
+          margin: 0;
+        }
+
+        .contact-info {
+          display: none;
+        }
+      }
+
+      .contact {
+        display: flex;
+      }
+    }
+  }
   
   @media (max-width: 768px) {
+    .modal-content {
+      padding: 20px;
+    }
+    
     .header {
       .nav {
         display: none;
@@ -96,6 +164,8 @@
       .nav.open {
         display: block;
       }
+
+      
   
     }
   }
