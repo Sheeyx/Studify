@@ -5,6 +5,9 @@ import { Member } from "../../libs/types/member";
 interface GlobalInterface {
   authMember: Member | null;
   setAuthMember: (member: Member | null) => void;
+  openModal: boolean;
+  handleOpenModal: () => void;
+  handleCloseModal: () => void;
 }
 
 export const GlobalContext = createContext<GlobalInterface | undefined>(

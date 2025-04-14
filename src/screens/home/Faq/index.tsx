@@ -14,18 +14,20 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import './styles.scss';
 import { Faq } from '../../../libs/types/faq';
 import FaqService from '../../../services/FaqService';
+import { useGlobals } from '../../../app/hooks/useGlobals';
 
 const FAQ: React.FC = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
-  const [faqs, setFaqs] = useState<Faq[]>([]); // Specify type of faqs state
+  const [faqs, setFaqs] = useState<Faq[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { handleOpenModal } = useGlobals(); // 👈 Grab modal open function
 
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
         const faqService = new FaqService();
-        const fetchedFaqs: Faq[] = await faqService.getFaqs(); // Specify type of fetchedFaqs
+        const fetchedFaqs: Faq[] = await faqService.getFaqs();
         setFaqs(fetchedFaqs);
       } catch (err) {
         setError('Failed to load FAQs. Please try again later.');
@@ -50,9 +52,8 @@ const FAQ: React.FC = () => {
         Quick answers for frequently asked questions
       </Typography>
 
-      {/* Grid Layout */}
       <Grid container spacing={4}>
-        {/* Left Column: FAQ Section */}
+        {/* Left Column: FAQ Accordion */}
         <Grid item xs={12} md={6} mt={4}>
           <Box sx={{ marginBottom: '2rem' }}>
             {loading ? (
@@ -64,7 +65,7 @@ const FAQ: React.FC = () => {
                 const panelId = `panel${index}`;
                 return (
                   <Accordion
-                    key={faq._id} // Use unique id from faq for key
+                    key={faq._id}
                     expanded={expanded === panelId}
                     onChange={handleChange(panelId)}
                     sx={{
@@ -99,13 +100,14 @@ const FAQ: React.FC = () => {
           </Box>
         </Grid>
 
-        {/* Right Column: Contact Us Section */}
+        {/* Right Column: Contact Us Button */}
         <Grid item xs={12} md={6} mt={4}>
           <Box className="contact-us">
             <Typography variant="h6" gutterBottom>
               Can’t find your answer?
             </Typography>
             <Button
+              onClick={handleOpenModal} // ✅ Trigger global modal
               variant="contained"
               sx={{
                 marginTop: '12px',
