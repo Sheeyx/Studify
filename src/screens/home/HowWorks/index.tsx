@@ -12,8 +12,7 @@ export default function HowWorks() {
     <div className='how-works container'>
       <Typography className='heading'>How it works</Typography>
       <Typography className='text'>
-        We help students to navigate the path to international 
-        education with expert guidance and a personalized approach
+        From the first consultation to landing at your destination — here's how Studify makes it happen:
       </Typography>
       
       {/* Show ApplicationSteps on desktop and MobileAccordion on mobile */}

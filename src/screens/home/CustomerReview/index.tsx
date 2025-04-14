@@ -7,7 +7,7 @@ export default function CustomerReview() {
   return (
     <div className='customer-review container'>
        <Typography className="heading">From our customers</Typography>
-       <Typography className="text">Our successful customers are more than happy to work with us. Just listen to what say</Typography>
+       <Typography className="text">Become our next success story</Typography>
        <VideoGrid/>
     </div>
   )

@@ -25,70 +25,93 @@
     }
     
     .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 600px; // Fixed height for all cards
         padding: 28px !important;
         border-radius: 24px;
         border: 1px solid rgba(94, 106, 109, 0.20);
         background: #FFF;
         cursor: pointer;
-        transition: 0.3s all;
-
-        &:hover {
-            border: 1px solid #FFF;
-            background: var(--Orange, #FF8225);
-            color: #FFF;
-
-            .package, .text-line, .text-line span, .btn {
-                color: #fff;
-            }
-
-            .btn {
-                background: #FFF;
-                color: #FF8225;
-            }
-        }
-
+        transition: all 0.4s ease-in-out;
+        position: relative;
+        overflow: hidden;
+      
         .package {
-            color: #FF8225;
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 28px;
-            letter-spacing: -0.24px;
+          color: #FF8225;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 28px;
+          letter-spacing: -0.24px;
         }
-
+      
         .text-line {
-            color: #5E6A6D;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            margin-top: 16px;
-            
-            span {
-                color: #FF8225;
-                font-size: 48px;
-                font-weight: 500;
-                line-height: 56px;
-                letter-spacing: -0.48px;
-            }
-        }
-
-        .divider {
-            margin-top: 28px;
-            height: 1px;
-        }
-
-        .btn {
-            border-radius: 20px;
-            border: 1px solid var(--Orange, #FF8225);
-            color: var(--Orange, #FF8225);
-            font-size: 14px;
-            padding: 16px 102px;
+          color: #5E6A6D;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          margin-top: 16px;
+      
+          span {
+            color: #FF8225;
+            font-size: 48px;
             font-weight: 500;
-            line-height: 24px;
-            letter-spacing: -0.18px;
-            margin-top: 80px;
-            transition: 0.3s all;
+            line-height: 56px;
+            letter-spacing: -0.48px;
+          }
         }
-    }
+      
+        .divider {
+          margin: 28px 0;
+          height: 1px;
+        }
+      
+        .MuiList-root {
+          flex-grow: 1;
+          overflow-y: auto; // Optional: if there's overflow
+        }
+      
+        .btn {
+          align-self: center;
+          border-radius: 20px;
+          border: 1px solid var(--Orange, #FF8225);
+          color: var(--Orange, #FF8225);
+          font-size: 14px;
+          padding: 12px 64px;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: -0.18px;
+          transition: 0.3s all;
+          margin-top: 32px;
+        }
+      
+        &:hover {
+          transform: scale(1.03);
+          width: 110%; // make it expand
+          z-index: 2;
+          border: 1px solid #FFF;
+          background: var(--Orange, #FF8225);
+          color: #FFF;
+      
+          .package,
+          .text-line,
+          .text-line span,
+          .btn {
+            color: #FFF;
+          }
+      
+          .btn {
+            background: #FFF;
+            color: #FF8225;
+          }
+        }
+      }
+      
+      
+      
+      
+      
 
     // Responsive styles
     @media (max-width: 1024px) {
