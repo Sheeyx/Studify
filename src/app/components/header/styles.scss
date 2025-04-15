@@ -13,6 +13,9 @@
         display: flex;
         gap: 20px;
         list-style: none;
+        li {
+          cursor: pointer;
+        }
       }
   
       a {
@@ -143,7 +146,7 @@
     .modal-content {
       padding: 20px;
     }
-    
+
     .header {
       .nav {
         display: none;

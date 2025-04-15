@@ -4,7 +4,7 @@ import { Button, Divider, Grid, List, ListItem, ListItemText, Typography } from 
 
 export default function PricePackage() {
   return (
-    <div className='price-package'>
+    <div className='price-package' id='pricing'>
         <div className='container'>
             <Typography className='heading'>Choose your package</Typography>
             <Typography className='text'>Whether you're just starting or need full support, there's a package for you.</Typography>

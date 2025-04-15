@@ -4,12 +4,12 @@ import ApplicationSteps from './components';
 import { Typography, useMediaQuery } from '@mui/material';
 import MobileAccordion from './components/MobileAccordion';
 
-export default function HowWorks() {
+export default function Process() {
   // Define breakpoints for mobile and desktop using Material-UI's useMediaQuery
   const isMobile = useMediaQuery('(max-width:600px)'); // Adjust this width as needed
 
   return (
-    <div className='how-works container'>
+    <div className='how-works container' id='process'>
       <Typography className='heading'>How it works</Typography>
       <Typography className='text'>
         From the first consultation to landing at your destination — here's how Studify makes it happen:

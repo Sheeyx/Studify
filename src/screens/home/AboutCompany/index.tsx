@@ -34,7 +34,7 @@ function AboutCompany() {
   };
 
   return (
-    <Container maxWidth="lg" className='about-company'>
+    <Container maxWidth="lg" className='about-company' id="about">
         {
             value === 0 ?
             (

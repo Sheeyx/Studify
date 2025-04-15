@@ -7,7 +7,7 @@ import User from "../../../assets/why-studify/user.svg";
 
 export default function WhyStudify() {
   return (
-    <Box className='why-stydify container'>
+    <Box className='why-stydify container' id="why">
         <Typography className='heading'>Why Studify</Typography>
         <Typography className='text'>We help students to navigate the path to international education with expert guidance and a personalized approach</Typography>
         <Grid container justifyContent="space-between">

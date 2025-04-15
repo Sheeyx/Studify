@@ -19,6 +19,12 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleNavClick = (sectionId: string) => {
+    setMenuOpen(false);
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
+
   return (
     <header className="header container">
       <div className="logo">
@@ -27,12 +33,12 @@ const Header = () => {
 
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#why">Why Studify</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#about">About us</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#results">Results</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a onClick={() => handleNavClick('why')}>Why Studify</a></li>
+          <li><a onClick={() => handleNavClick('process')}>Process</a></li>
+          <li><a onClick={() => handleNavClick('about')}>About us</a></li>
+          <li><a onClick={() => handleNavClick('pricing')}>Pricing</a></li>
+          <li><a onClick={() => handleNavClick('results')}>Results</a></li>
+          <li><a onClick={() => handleNavClick('blog')}>Blog</a></li>
         </ul>
       </nav>
 
