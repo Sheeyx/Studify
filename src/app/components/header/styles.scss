@@ -132,6 +132,16 @@
   @media (max-width: 1030px) {
     .header {
       padding: 0 40px;
+
+      .logo {
+        img {
+          width: 120px;
+        }
+      }
+
+        .contact .contact-btn {
+          padding: 8px 12px;
+        }
     }
     .modal-content{
       .contact-form-content{

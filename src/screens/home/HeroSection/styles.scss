@@ -160,14 +160,25 @@
 
     // Media Queries
     @media (max-width: 1024px) {
-        .hero-section {
-            padding: 80px 20px !important;
-            .container {
-                max-width: 1280px;
-                margin: 0 auto;
-                padding: 0 20px !important;
-            }
+        .css-1hbopwx-MuiGrid-root>.MuiGrid-item {
+            padding: 0 0 80px 0;
         }
+
+        .hero-description {
+            margin-bottom: 20px !important;
+        }
+
+        .hero-section {
+            padding-top: 20px !important;
+            padding: 80px 0 !important;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px !important;
+        }
+        
         .hero-left {            
             h2 {
                 font-size: 56px;

@@ -127,7 +127,6 @@ export default function ContactForm() {
                             <Box>
                                 <Typography variant="body1" className="info-item_text">Contact number</Typography>
                                 <Typography variant="body2" className='info-item_username'>+998 88 658 1000</Typography>
-                                <Typography variant="body2" className='info-item_username'>+998 88 658 1000</Typography>
                             </Box>
                         </Box>
                     </a>
