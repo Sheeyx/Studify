@@ -1,12 +1,18 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px !important;
-    background-color: white;
-    position: relative;
-    z-index: 1000;
-    height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1000;
+  height: 90px;
+  padding: 0 90px;
+  box-sizing: border-box;
+  
   
     .nav {
       ul {
@@ -124,6 +130,9 @@
   }
 
   @media (max-width: 1030px) {
+    .header {
+      padding: 0 40px;
+    }
     .modal-content{
       .contact-form-content{
         .contact-form  {
@@ -148,6 +157,7 @@
     }
 
     .header {
+      padding: 0 20px;
       .nav {
         display: none;
       }
