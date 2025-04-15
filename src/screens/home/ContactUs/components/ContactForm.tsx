@@ -12,7 +12,6 @@ import './styles.scss';
 
 export default function ContactForm() {
     const messageService = new MessageService();
-    const [selectedCity, setSelectedCity] = useState<string>('');
     const [name, setName] = useState<string>('');
     const [phoneNumber, setPhoneNumber] = useState<string>('');
     const [openSnackbar, setOpenSnackbar] = useState<boolean>(false);
@@ -22,14 +21,7 @@ export default function ContactForm() {
         const input: MessageInput = {
             fullName: name,
             phone: phoneNumber,
-            city: selectedCity as City,
-        };
-
-        const handleCityChange = (event: SelectChangeEvent<string>) => {
-            setSelectedCity(event.target.value as string);
-        };
-    
-      
+        };      
     
             try {
                 const response = await messageService.createMessage(input);
@@ -38,7 +30,6 @@ export default function ContactForm() {
                 // Clear form fields
                 setName('');
                 setPhoneNumber('');
-                setSelectedCity('');
     
                 // Show success notification
                 setMessageStatus("Message sent successfully!");
