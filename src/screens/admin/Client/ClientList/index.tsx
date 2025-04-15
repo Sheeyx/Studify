@@ -30,7 +30,6 @@ const ClientMessageList: React.FC = () => {
             <th>#</th>
             <th>Full Name</th>
             <th>Phone</th>
-            <th>City</th>
             <th>Created At</th>
           </tr>
         </thead>
@@ -40,7 +39,6 @@ const ClientMessageList: React.FC = () => {
               <td>{index + 1}</td>
               <td>{message.fullName}</td>
               <td>{message.phone}</td>
-              <td>{message.city}</td>
               <td>{new Date(message.createdAt).toLocaleString()}</td>
             </tr>
           ))}
