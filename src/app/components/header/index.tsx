@@ -15,9 +15,20 @@ const Header = () => {
   const { openModal, handleOpenModal, handleCloseModal } = useGlobals(); // ✅ Use global modal control
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [isAnimating, setIsAnimating] = useState(false);
+  
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    if (menuOpen) {
+      setIsAnimating(true); // Trigger CSS closing animation
+      setTimeout(() => {
+        setMenuOpen(false);
+        setIsAnimating(false);
+      }, 300); // Match the animation duration in CSS
+    } else {
+      setMenuOpen(true);
+    }
   };
+  
 
   const handleNavClick = (sectionId: string) => {
     setMenuOpen(false);
@@ -31,7 +42,7 @@ const Header = () => {
         <img src={Logo} alt="Studify logo" />
       </div>
 
-      <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+      <nav className={`nav ${menuOpen ? 'open' : ''} ${isAnimating ? 'closing' : ''}`}>
         <ul>
           <li><a onClick={() => handleNavClick('why')}>Why Studify</a></li>
           <li><a onClick={() => handleNavClick('process')}>Process</a></li>
