@@ -16,8 +16,8 @@ export default function HeroSection() {
     <Box className="hero-section container">
       <Grid container spacing={4} alignItems="center" mt={6}>
         <Grid item xs={12} md={6} className="hero-left">
-          <Typography variant="h2" component="h2">
-            Your dream of studying abroad is our mission
+          <Typography variant="h1" component="h1">
+            Chet elda o'qish oson
           </Typography>
           <Typography variant="body1" className="hero-description">
             We know how to speed up the application process and help you save time and money.
