@@ -16,12 +16,9 @@ export default function HeroSection() {
     <Box className="hero-section container">
       <Grid container spacing={4} alignItems="center" mt={6}>
         <Grid item xs={12} md={6} className="hero-left">
-          <Typography variant="h1" component="h1">
-            Chet elda o'qish oson
-          </Typography>
-          <Typography variant="body1" className="hero-description">
-            We know how to speed up the application process and help you save time and money.
-          </Typography>
+        <h1>Chet Elda O‘qish Bo‘yicha Bepul Konsultatsiya – Studify.uz</h1>
+        <p>Biz O‘zbekistonlik talabalar uchun Koreyada va boshqa xorijiy davlatlarda o‘qish imkoniyatlarini taqdim etamiz: grantlar, vizalar, IELTS va TOPIK kurslari, yotoqxona joylashtirish va kutib olish xizmatlari.</p>
+
           <Box className="btn">
             <Button variant="contained" className="consultaion-btn" endIcon={<ArrowForwardIcon />}>
               Free consultation
