@@ -15,21 +15,23 @@ import './styles.scss';
 import { Faq } from '../../../libs/types/faq';
 import FaqService from '../../../services/FaqService';
 import { useGlobals } from '../../../app/hooks/useGlobals';
+import { useTranslation } from 'react-i18next';
 
 const FAQ: React.FC = () => {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState<string | false>(false);
   const [faqs, setFaqs] = useState<Faq[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const { handleOpenModal } = useGlobals(); // 👈 Grab modal open function
+  const { handleOpenModal } = useGlobals();
 
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
         const faqService = new FaqService();
-        const fetchedFaqs: Faq[] = await faqService.getFaqs();
+        const fetchedFaqs = await faqService.getFaqs();
         setFaqs(fetchedFaqs);
-      } catch (err) {
+      } catch {
         setError('Failed to load FAQs. Please try again later.');
       } finally {
         setLoading(false);
@@ -46,14 +48,13 @@ const FAQ: React.FC = () => {
   return (
     <Box className="faq container" sx={{ padding: '2rem' }}>
       <Typography variant="h4" gutterBottom className="heading">
-        FAQs
+        {t('faq.title')}
       </Typography>
       <Typography variant="subtitle1" gutterBottom className="text">
-        Quick answers for frequently asked questions
+        {t('faq.subtitle')}
       </Typography>
 
       <Grid container spacing={4}>
-        {/* Left Column: FAQ Accordion */}
         <Grid item xs={12} md={6} mt={4}>
           <Box sx={{ marginBottom: '2rem' }}>
             {loading ? (
@@ -86,11 +87,13 @@ const FAQ: React.FC = () => {
                       aria-controls={`${panelId}-content`}
                       id={`${panelId}-header`}
                     >
-                      <Typography sx={{ color: '#173B45' }}>Q: {faq.faqTitle}</Typography>
+                      <Typography sx={{ color: '#173B45' }}>
+                        {t('faq.prefix_q')} {faq.faqTitle}
+                      </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography sx={{ color: '#5E6A6D' }}>
-                        <span style={{ color: '#173B45' }}>A:</span> {faq.faqContent}
+                        <span style={{ color: '#173B45' }}>{t('faq.prefix_a')}</span> {faq.faqContent}
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -100,14 +103,13 @@ const FAQ: React.FC = () => {
           </Box>
         </Grid>
 
-        {/* Right Column: Contact Us Button */}
         <Grid item xs={12} md={6} mt={4}>
           <Box className="contact-us">
             <Typography variant="h6" gutterBottom>
-              Can’t find your answer?
+              {t('faq.contact_prompt')}
             </Typography>
             <Button
-              onClick={handleOpenModal} // ✅ Trigger global modal
+              onClick={handleOpenModal}
               variant="contained"
               sx={{
                 marginTop: '12px',
@@ -121,7 +123,7 @@ const FAQ: React.FC = () => {
                 },
               }}
             >
-              Contact us
+              {t('faq.contact_button')}
             </Button>
           </Box>
         </Grid>

@@ -63,6 +63,11 @@
       display: none;
     }
   
+    .contact {
+      display: flex;
+      align-items: center;
+    }
+
     .contact .contact-btn {
       padding: 10px 20px;
       border: 1px solid #ff7b40;
@@ -71,7 +76,7 @@
       font-size: 16px;
       text-decoration: none;
       transition: background-color 0.3s ease, color 0.3s ease;
-  
+      margin-left: 12px;
       &:hover {
         background-color: #ff7b40;
         color: white;

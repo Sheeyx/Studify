@@ -1,0 +1,200 @@
+{
+    "nav": {
+      "why": "Why Studify",
+      "process": "Process",
+      "about": "About us",
+      "pricing": "Pricing",
+      "results": "Results",
+      "blog": "Blog",
+      "contact_us": "Contact us"
+    },
+
+    "hero": {
+        "title": "Your dream of studying abroad is our mission",
+        "description": "We know how to speed up the application process and help you save time and money.",
+        "free_consultation": "Free consultation",
+        "years_experience": "years of experience",
+        "success_rate": "success rate"
+    },
+
+    "why_studify": {
+        "title": "Why Studify",
+        "description": "We help students to navigate the path to international education with expert guidance and a personalized approach",
+        "card_1_title": "Free consultation",
+        "card_1_text": "Get an expert advice and guidance at no cost to help you make informed decisions before deciding your educational future.",
+        "card_2_title": "Guaranteed admission",
+        "card_2_text": "With our strong network of partner universities, we ensure a high chance of securing your admission, guiding you through every step of the process.",
+        "card_3_title": "A to Z support",
+        "card_3_text": "From the initial consultation to visa applications and arrival, we provide full support—including document submission and meeting at the airport."
+      },
+
+      "process": {
+        "title": "How it works",
+        "description": "From the first consultation to landing at your destination — here's how Studify makes it happen:"
+      },
+
+      "steps": {
+        "panel1": {
+          "title": "Consultation + Program",
+          "content": [
+            {
+              "subtitle": "Free Consultation",
+              "text": "Receive expert advice and personalized guidance at no cost. We help you make well-informed decisions tailored to your educational goals, ensuring clarity before you take the next step in your academic journey."
+            },
+            {
+              "subtitle": "Guaranteed Admission",
+              "text": "With our extensive network of reputable partner universities, we maximize your chances of acceptance. From selecting the right program to finalizing your admission, we stand by your side, making every step smoother and more successful."
+            },
+            {
+              "subtitle": "A to Z Support",
+              "text": "From your first consultation to your arrival on campus, we cover it all. Our comprehensive support includes visa application, document submission, and even a warm welcome at the airport. We ensure that your transition to studying abroad is seamless and stress-free."
+            }
+          ]
+        },
+        "panel2": {
+          "title": "Application Process",
+          "content": [
+            {
+              "text": "Once you've decided on your program, we handle the paperwork and guide you through the detailed application process."
+            },
+            {
+              "subtitle": "Document Preparation",
+              "text": "We assist you in gathering all required documents, including transcripts, letters of recommendation, and personal statements."
+            },
+            {
+              "subtitle": "Application Submission",
+              "text": "Our team ensures your application is accurate, complete, and submitted within deadlines, increasing your chances of acceptance."
+            },
+            {
+              "subtitle": "Application Tracking",
+              "text": "We maintain communication with the university and keep you updated on the progress of your application."
+            }
+          ]
+        },
+        "panel3": {
+          "title": "Admission",
+          "content": [
+            {
+              "text": "Once the ideal program is chosen, we move to the application process. Our team is here to help you every step of the way, from preparing required documents to filling out the application forms. We thoroughly review your materials to make sure everything is complete and meets the university’s standards. By offering insights and advice on application essays, recommendation letters, and additional requirements, we boost your chances of acceptance. We maintain close communication with our partner universities, ensuring a smooth and timely submission of your application. With our support, you can approach this critical phase with confidence."
+            }
+          ]
+        },
+        "panel4": {
+          "title": "Visa Application",
+          "content": [
+            {
+              "text": "Securing a visa is one of the most important steps in your international education journey. After you've received your admission letter, we help guide you through the entire visa application process. We provide detailed instructions on the necessary documents, assist you in completing forms, and ensure that all legal and procedural requirements are met. Our team offers preparation tips for visa interviews and keeps you updated on any changes or additional information requested by the embassy. We understand how stressful this stage can be, which is why we handle the complexities, allowing you to focus on getting ready for your new life abroad."
+            }
+          ]
+        },
+        "panel5": {
+          "title": "Congratulations 🎉",
+          "content": [
+            {
+              "text": "Once your admission is confirmed and your visa is approved, it's time to celebrate the beginning of a new chapter in your life! You are now officially on your way to studying abroad, and we're here to ensure your final steps are as smooth as possible. Our support doesn’t stop at paperwork; we assist with pre-departure arrangements, providing guidance on travel, accommodation, and cultural orientation. Upon arrival, we offer services like airport pickup and help you settle into your new environment. From start to finish, Studify stands by you to make sure your transition is seamless. Your success is our celebration!"
+            }
+          ]
+        }
+      },
+
+      "about_company": {
+        "tab_team": "Our Team",
+        "tab_about": "About Us",
+        "team_title": "Meet the Minds behind your journey",
+        "team_description": "Our team of passionate experts is here to guide, support, and inspire you every step of the way.",
+        "about_title": "Our journey",
+        "about_description": "Our team of passionate experts is here to guide, support, and inspire you every step of the way."
+      },
+
+
+      "pricing": {
+        "title": "Choose your package",
+        "description": "Whether you're just starting or need full support, there's a package for you.",
+        "basic": {
+          "title": "Basic",
+          "desc": "Ideal for those who have experience dealing with starting new life abroad.",
+          "features": [
+            "Study Abroad Consultation",
+            "University Admission Support",
+            "Visa Application Guidance",
+            "No Post-Arrival Services"
+          ]
+        },
+        "premium": {
+          "title": "Premium",
+          "desc": "Complete A to Z support – from planning to arrival in your new country.",
+          "features": [
+            "Everything in the Basic Package",
+            "Airport Pickup & Welcome",
+            "Accommodation Arrangement",
+            "Full Ongoing Support",
+            "Direct Contact with Our Advisors"
+          ]
+        },
+        "zero": {
+          "title": "Zero Loss",
+          "desc": "Full responsibility. Zero risk. 100% confidence.",
+          "features": [
+            "Free Consultation & Career Guidance",
+            "Guaranteed University Admission",
+            "Complete Document Preparation",
+            "Priority Support from Senior Advisors",
+            "Airport Pickup & Accommodation Support",
+            "Post-Arrival Support (SIM, Banking, Orientation, etc.)",
+            "100% Money-Back Guarantee if Visa is Rejected",
+            "✅ You focus on your future. We take care of the rest — or you pay nothing."
+          ]
+        },
+        "button": "Get started"
+      },
+
+      "results": {
+        "title": "Our results",
+        "description": "Our customers got accepted into best universities and programs, below are some of them"
+      },
+
+      "reviews": {
+        "title": "From our customers",
+        "description": "Become our next success story"
+      },
+
+      "contact": {
+        "title": "Let’s talk",
+        "subtitle": "Just contact us, so we can discuss how could we help you"
+      },
+
+      "contact_form": {
+        "title": "Book your free consultation",
+        "name_label": "Your name",
+        "phone_label": "Phone number",
+        "send_button": "Send",
+        "success": "Message sent successfully!",
+        "error": "Failed to send the message. Please try again.",
+        "instagram": "Instagram",
+        "telegram": "Telegram",
+        "email": "Email",
+        "contact_number": "Contact number"
+      },
+
+      "faq": {
+        "title": "FAQs",
+        "subtitle": "Quick answers for frequently asked questions",
+        "contact_prompt": "Can’t find your answer?",
+        "contact_button": "Contact us",
+        "prefix_q": "Q:",
+        "prefix_a": "A:"
+      },
+      
+    "footer": {
+      "description": "Some random text regarding Studify doing great work",
+      "why": "Why Studify",
+      "process": "Process",
+      "articles": "Articles",
+      "about": "About us",
+      "pricing": "Pricing",
+      "results": "Results",
+      "privacy_policy": "Privacy and policy",
+      "terms_conditions": "Terms and Conditions"
+    }
+  }
+  

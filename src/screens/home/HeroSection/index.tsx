@@ -6,9 +6,10 @@ import "./styles.scss";
 import Photo from "../../../assets/hero-section/home.png";
 import PartnerCarousel from './components';
 import Telegram from "../../../assets/hero-section/tg.svg";
-
+import { useTranslation } from 'react-i18next';
 
 export default function HeroSection() {
+  const { t } = useTranslation();
   const experienceProps = useSpring({ from: { number: 0 }, to: { number: 5 }, config: { duration: 2000 } });
   const successRateProps = useSpring({ from: { number: 0 }, to: { number: 99 }, config: { duration: 2000 } });
 
@@ -16,22 +17,24 @@ export default function HeroSection() {
     <Box className="hero-section container">
       <Grid container spacing={4} alignItems="center" mt={6}>
         <Grid item xs={12} md={6} className="hero-left">
-        <h1>Chet Elda O‘qish Bo‘yicha Bepul Konsultatsiya – Studify.uz</h1>
-        <p>Biz O‘zbekistonlik talabalar uchun Koreyada va boshqa xorijiy davlatlarda o‘qish imkoniyatlarini taqdim etamiz: grantlar, vizalar, IELTS va TOPIK kurslari, yotoqxona joylashtirish va kutib olish xizmatlari.</p>
-
+          <Typography variant="h1" component="h1">
+            {t('hero.title')}
+          </Typography>
+          <Typography variant="body1" className="hero-description">
+            {t('hero.description')}
+          </Typography>
           <Box className="btn">
             <Button variant="contained" className="consultaion-btn" endIcon={<ArrowForwardIcon />}>
-              Free consultation
+              {t('hero.free_consultation')}
             </Button>
             <Button
-            variant="contained"
-            className="tg-btn"
-            onClick={() => window.open("https://t.me/studify_uz", "_blank")}
-          >
-            <img src={Telegram} alt="tg" />
-          </Button>
+              variant="contained"
+              className="tg-btn"
+              onClick={() => window.open("https://t.me/studify_uz", "_blank")}
+            >
+              <img src={Telegram} alt="tg" />
+            </Button>
           </Box>
-          
         </Grid>
 
         <Grid item md={6} xs={12} className="hero-right">
@@ -41,7 +44,7 @@ export default function HeroSection() {
               <Typography>
                 <animated.span>
                   {experienceProps.number.to((n) => Math.round(n))}
-                </animated.span> years of experience
+                </animated.span> {t('hero.years_experience')}
               </Typography>
             </Box>
             <Box className="success-rate">
@@ -50,13 +53,12 @@ export default function HeroSection() {
                   {successRateProps.number.to((n) => Math.round(n))}
                 </animated.span>%
               </Typography>
-              <Typography className='paragraph'> success rate</Typography>
+              <Typography className='paragraph'>{t('hero.success_rate')}</Typography>
             </Box>
           </Box>
         </Grid>
       </Grid>
 
-      {/* Partner Universities Section */}
       <PartnerCarousel />
     </Box>
   );

@@ -1,16 +1,19 @@
-import React from 'react'
-import "./styles.scss"
-import { Grid, Typography } from '@mui/material'
-import ResultsSwiper from './components/Swiper'
+import React from 'react';
+import "./styles.scss";
+import { Grid, Typography } from '@mui/material';
+import ResultsSwiper from './components/Swiper';
+import { useTranslation } from 'react-i18next';
 
 export default function OurResults() {
+  const { t } = useTranslation();
+
   return (
     <div className='our-results' id='results'>
-        <div className='container'>
-          <Typography className="heading">Our results</Typography>
-          <Typography className="text">Our customers got accepted into best universities and programs, below are some of them</Typography>
-          <ResultsSwiper />
-        </div>
+      <div className='container'>
+        <Typography className="heading">{t('results.title')}</Typography>
+        <Typography className="text">{t('results.description')}</Typography>
+        <ResultsSwiper />
+      </div>
     </div>
-  )
+  );
 }

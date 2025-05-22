@@ -6,6 +6,7 @@ import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 import './css/index.css';
 import ContextProvider from './app/context/ContextProvider';
+import './i18n'; // ✅ Add this at the top
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);

@@ -3,46 +3,50 @@ import './styles.scss';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { Container } from '@mui/material';
-import Logo from "../../../assets/Logo_footer.svg"
+import Logo from "../../../assets/Logo_footer.svg";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-    return (
-        <Box className="footer container">
-            <Grid className='footer-logo'>
-                <img src={Logo} alt="" />
+  const { t } = useTranslation();
+
+  return (
+    <Box className="footer container">
+      <Grid className="footer-logo">
+        <img src={Logo} alt="Studify Logo" />
+      </Grid>
+
+      <Grid container>
+        <Grid item xs={12} md={4}>
+          <Grid xs={6} sm={6} mt={2}>
+            <Typography variant="body2" className="footer-description">
+              {t('footer.description')}
+            </Typography>
+          </Grid>
+        </Grid>
+
+        <Grid item xs={12} md={8} className="footer-links">
+          <Grid container>
+            <Grid item xs={6} sm={3}>
+              <Typography variant="body2">{t('footer.why')}</Typography>
+              <Typography variant="body2">{t('footer.process')}</Typography>
             </Grid>
-            <Grid container>
-                <Grid item xs={12} md={4}>
-                    <Grid xs={6} sm={6} mt={2}>
-                        <Typography variant="body2" className='footer-description'>
-                            Some random text regarding Studify doing great work
-                        </Typography>
-                    </Grid>
-                </Grid>
-                <Grid item xs={12} md={8} className="footer-links">
-                    <Grid container>
-                        <Grid item xs={6} sm={3}>
-                            <Typography variant="body2">Why Studify</Typography>
-                            <Typography variant="body2">Process</Typography>
-                        </Grid>
-                        <Grid item xs={6} sm={3}>
-                            <Typography variant="body2">Articles</Typography>
-                            <Typography variant="body2">About us</Typography>
-                        </Grid>
-                        <Grid item xs={6} sm={3}>
-                            <Typography variant="body2">Pricing</Typography>
-                            <Typography variant="body2">Results</Typography>
-                        </Grid>
-                        <Grid item xs={6} sm={3}>
-                            <Typography variant="body2">Privacy and policy</Typography>
-                            <Typography variant="body2">Terms and Conditions</Typography>
-                        </Grid>
-                    </Grid>
-                </Grid>
+            <Grid item xs={6} sm={3}>
+              <Typography variant="body2">{t('footer.articles')}</Typography>
+              <Typography variant="body2">{t('footer.about')}</Typography>
             </Grid>
-        </Box>
-    );
+            <Grid item xs={6} sm={3}>
+              <Typography variant="body2">{t('footer.pricing')}</Typography>
+              <Typography variant="body2">{t('footer.results')}</Typography>
+            </Grid>
+            <Grid item xs={6} sm={3}>
+              <Typography variant="body2">{t('footer.privacy_policy')}</Typography>
+              <Typography variant="body2">{t('footer.terms_conditions')}</Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Box>
+  );
 };
 
 export default Footer;

@@ -3,19 +3,19 @@ import './styles.scss';
 import ApplicationSteps from './components';
 import { Typography, useMediaQuery } from '@mui/material';
 import MobileAccordion from './components/MobileAccordion';
+import { useTranslation } from 'react-i18next';
 
 export default function Process() {
-  // Define breakpoints for mobile and desktop using Material-UI's useMediaQuery
-  const isMobile = useMediaQuery('(max-width:600px)'); // Adjust this width as needed
+  const isMobile = useMediaQuery('(max-width:600px)');
+  const { t } = useTranslation();
 
   return (
     <div className='how-works container' id='process'>
-      <Typography className='heading'>How it works</Typography>
+      <Typography className='heading'>{t('process.title')}</Typography>
       <Typography className='text'>
-        From the first consultation to landing at your destination — here's how Studify makes it happen:
+        {t('process.description')}
       </Typography>
-      
-      {/* Show ApplicationSteps on desktop and MobileAccordion on mobile */}
+
       {isMobile ? <MobileAccordion /> : <ApplicationSteps />}
     </div>
   );

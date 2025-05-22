@@ -1,0 +1,199 @@
+{
+    "nav": {
+      "why": "Nega Studify",
+      "process": "Jarayon",
+      "about": "Biz haqimizda",
+      "pricing": "Narxlar",
+      "results": "Natijalar",
+      "blog": "Blog",
+      "contact_us": "Biz bilan bog'laning"
+    },
+
+    "hero": {
+        "title": "Chet elda o‘qish orzuingiz — bizning vazifamiz",
+        "description": "Biz ariza topshirish jarayonini tezlashtirishni va vaqtingiz hamda pulingizni tejashni bilamiz.",
+        "free_consultation": "Bepul maslahat",
+        "years_experience": "yillik tajriba",
+        "success_rate": "muvaffaqiyat darajasi"
+      },
+
+      "why_studify": {
+        "title": "Nega Studify",
+        "description": "Biz talabalarni xalqaro ta’lim yo‘lida ekspert yordami va shaxsiy yondashuv bilan yo‘naltiramiz",
+        "card_1_title": "Bepul maslahat",
+        "card_1_text": "Ta’lim kelajagingizni belgilashdan oldin mutaxassisdan bepul maslahat va yo‘l-yo‘riq oling.",
+        "card_2_title": "Kafolatlangan qabul",
+        "card_2_text": "Hamkor universitetlarimiz tarmog‘i orqali biz sizga qabul olish imkoniyatini kafolatlaymiz va har bir bosqichda yordam beramiz.",
+        "card_3_title": "To‘liq yordam",
+        "card_3_text": "Dastlabki maslahatdan vizaga ariza topshirish va yetib kelishgacha, hujjat topshirish va aeroportda kutib olishni o‘z ichiga olgan to‘liq yordam ko‘rsatamiz."
+      },
+
+      "process": {
+        "title": "Qanday ishlaydi",
+        "description": "Dastlabki maslahatdan tortib manzilingizga yetib borishgacha — bu jarayon Studify bilan qanday amalga oshiriladi:"
+      },
+
+      "steps": {
+        "panel1": {
+          "title": "Maslahat + Dastur",
+          "content": [
+            {
+              "subtitle": "Bepul maslahat",
+              "text": "Mutaxassislarimizdan bepul maslahat va shaxsiy yo‘naltirish oling. Bu sizga ta’lim yo‘lingizda to‘g‘ri va o‘ylangan qaror qabul qilishga yordam beradi."
+            },
+            {
+              "subtitle": "Kafolatlangan qabul",
+              "text": "Hamkor universitetlarimizning keng tarmog‘i orqali qabul ehtimolingizni oshiramiz. To‘g‘ri dastur tanlashdan boshlab, hujjat topshirishgacha har bir bosqichda siz bilan birgamiz."
+            },
+            {
+              "subtitle": "To‘liq qo‘llab-quvvatlash",
+              "text": "Birinchi maslahatdan boshlab kampusga yetib borguningizcha yordam beramiz. Bu vizaga ariza, hujjatlar va hatto aeroportda kutib olishni o‘z ichiga oladi. O‘quv safaringiz silliq va stresssiz bo‘lishini ta’minlaymiz."
+            }
+          ]
+        },
+        "panel2": {
+          "title": "Ariza topshirish jarayoni",
+          "content": [
+            {
+              "text": "Dastur tanlanganidan so‘ng, biz butun hujjat ishlarini yuritamiz va har bir bosqichda yo‘naltiramiz."
+            },
+            {
+              "subtitle": "Hujjatlarni tayyorlash",
+              "text": "Transkriptlar, tavsiyanomalar va motivatsion xatlar kabi barcha zarur hujjatlarni yig‘ishda yordam beramiz."
+            },
+            {
+              "subtitle": "Arizani yuborish",
+              "text": "Jamoamiz arizangiz to‘g‘ri va to‘liq bo‘lishini ta’minlaydi hamda belgilangan muddatlarda yuboradi."
+            },
+            {
+              "subtitle": "Jarayonni kuzatish",
+              "text": "Biz universitet bilan aloqada bo‘lamiz va arizangiz holati haqida sizni doimiy xabardor qilamiz."
+            }
+          ]
+        },
+        "panel3": {
+          "title": "Qabul qilish",
+          "content": [
+            {
+              "text": "Ideal dastur tanlangach, biz ariza topshirish bosqichiga o‘tamiz. Jamoamiz sizga har bir bosqichda yordam beradi — kerakli hujjatlarni tayyorlashdan boshlab, ariza shakllarini to‘ldirishgacha. Materiallaringiz to‘liq va universitet standartlariga mos bo‘lishi uchun ularni puxta ko‘rib chiqamiz. Motivatsion xatlar, tavsiyanomalar va boshqa qo‘shimcha talablar bo‘yicha foydali maslahatlar berish orqali sizning qabul qilinish imkoniyatingizni oshiramiz. Hamkor universitetlarimiz bilan doimiy aloqada bo‘lib, arizangizning o‘z vaqtida va to‘g‘ri yuborilishini ta’minlaymiz. Bizning qo‘llab-quvvatlashimiz bilan siz ushbu muhim bosqichni ishonch bilan bosib o‘tasiz."
+            }
+          ]
+        },
+        "panel4": {
+          "title": "Visa olish",
+          "content": [
+            {
+              "text": "Visa olish — xalqaro ta’lim yo‘lingizdagi eng muhim bosqichlardan biridir. Qabul xatini olganingizdan so‘ng, biz sizni butun viza ariza jarayoni davomida yo‘naltirib boramiz. Biz kerakli hujjatlar bo‘yicha batafsil ko‘rsatmalar beramiz, ariza shakllarini to‘ldirishda yordam beramiz va barcha huquqiy hamda protsessual talablarning bajarilishini ta’minlaymiz. Jamoamiz viza suhbatiga tayyorgarlik ko‘rish bo‘yicha maslahatlar beradi va elchixona tomonidan so‘ralgan har qanday qo‘shimcha ma’lumotlar yoki o‘zgarishlar haqida sizni xabardor qilib boradi. Bu bosqich stressli bo‘lishi mumkinligini tushunamiz, shuning uchun biz murakkabliklarni o‘z zimmamizga olamiz va sizning yangi hayotingizga tayyorgarlikka e’tibor qaratishingizga yordam beramiz."
+            }
+          ]
+        },
+        "panel5": {
+          "title": "Tabriklaymiz 🎉",
+          "content": [
+            {
+              "text": "Qabulingiz tasdiqlanib, vizangiz ma’qullangach, hayotingizdagi yangi bosqichni nishonlash vaqti keldi! Endi siz chet elda o‘qish sari rasmiy ravishda yo‘l olgansiz, va biz sizning so‘nggi qadamlaringizni imkon qadar silliq va oson qilish uchun shu yerdamiz. Bizning yordamiz faqat hujjatlar bilan cheklanmaydi — biz safarga tayyorgarlik, yo‘l harakati, turar joy va madaniy moslashuv bo‘yicha ham maslahatlar beramiz. Yetib kelganingizda sizni aeroportda kutib olish, joylashishga yordam berish kabi xizmatlarni ham taqdim etamiz. Boshlanishidan to to‘liq moslashuvgacha — Studify doimo siz bilan. Sizning muvaffaqiyatingiz — bu bizning bayramimiz!"
+            }
+          ]
+        }
+      },
+
+      "about_company": {
+        "tab_team": "Bizning jamoa",
+        "tab_about": "Biz haqimizda",
+        "team_title": "Safaringiz ortida turgan insonlar bilan tanishing",
+        "team_description": "Bizning fidoyi mutaxassislar jamoasi sizni har bir bosqichda yo‘l-yo‘riq ko‘rsatish, qo‘llab-quvvatlash va ilhomlantirish uchun shu yerda.",
+        "about_title": "Bizning yo‘l",
+        "about_description": "Bizning fidoyi mutaxassislar jamoasi sizni har bir bosqichda yo‘l-yo‘riq ko‘rsatish, qo‘llab-quvvatlash va ilhomlantirish uchun shu yerda."
+      },
+
+      "pricing": {
+        "title": "O'zingizga mos paketni tanlang",
+        "description": "Yangi boshlanganlar yoki to‘liq yordamga muhtojlar uchun bizda mos paket mavjud.",
+        "basic": {
+          "title": "Basic",
+          "desc": "Yangi hayotni chet elda boshlash tajribasiga ega bo‘lganlar uchun ideal.",
+          "features": [
+            "Chet elda o‘qish bo‘yicha maslahat",
+            "Universitetga hujjat topshirishda yordam",
+            "Viza olish bo‘yicha yo‘l-yo‘riq",
+            "Kelgandan keyingi xizmatlar yo‘q"
+          ]
+        },
+        "premium": {
+          "title": "Premium",
+          "desc": "A dan Z gacha to‘liq yordam – rejalashtirishdan to yetib borishgacha.",
+          "features": [
+            "Basic paketdagi barcha xizmatlar",
+            "Aeroportda kutib olish va qarshi olish",
+            "Yashash joyini topishda yordam",
+            "To‘liq doimiy yordam",
+            "Maslahatchilar bilan bevosita aloqa"
+          ]
+        },
+        "zero": {
+          "title": "Zero Loss",
+          "desc": "To‘liq mas’uliyat. Hech qanday xavf yo‘q. 100% ishonch.",
+          "features": [
+            "Bepul maslahat va kasbiy yo‘nalish bo‘yicha ko‘mak",
+            "Universitetga kafolatli qabul",
+            "To‘liq hujjat tayyorlash xizmati",
+            "Katta maslahatchilardan ustuvor yordam",
+            "Aeroportda kutib olish va yashash bo‘yicha yordam",
+            "Kelgandan keyingi yordam (SIM, bank, tanishtiruv va h.k.)",
+            "Viza rad etilsa 100% pulni qaytarib berish",
+            "✅ Siz kelajagingizga e’tibor qarating — qolganini biz hal qilamiz yoki siz hech nima to‘lamaysiz"
+          ]
+        },
+        "button": "Boshlash"
+      },
+
+      "results": {
+        "title": "Natijalarimiz",
+        "description": "Bizning mijozlar eng yaxshi universitet va dasturlarga qabul qilindi. Quyida ulardan ba'zilari keltirilgan"
+      },
+
+      "reviews": {
+        "title": "Mijozlarimizdan",
+        "description": "Keyingi muvaffaqiyatli hikoya sizniki bo‘lsin"
+      },
+
+      "contact": {
+        "title": "Keling, suhbatlashamiz",
+        "subtitle": "Biz bilan bog‘laning, sizga qanday yordam bera olishimizni muhokama qilaylik"
+      },
+
+      "contact_form": {
+        "title": "Bepul maslahatga yoziling",
+        "name_label": "Ismingiz",
+        "phone_label": "Telefon raqami",
+        "send_button": "Yuborish",
+        "success": "Xabaringiz muvaffaqiyatli yuborildi!",
+        "error": "Xabar yuborilmadi. Iltimos, qayta urinib ko‘ring.",
+        "instagram": "Instagram",
+        "telegram": "Telegram",
+        "email": "Elektron pochta",
+        "contact_number": "Aloqa raqami"
+      },
+
+      "faq": {
+        "title": "Ko‘p so‘raladigan savollar",
+        "subtitle": "Eng ko‘p beriladigan savollarga tezkor javoblar",
+        "contact_prompt": "Savolingizga javob topilmadimi?",
+        "contact_button": "Biz bilan bog‘laning",
+        "prefix_q": "Savol:",
+        "prefix_a": "Javob:"
+      },
+
+    "footer": {
+      "description": "Studify ajoyib ish qilayotgani haqida matn",
+      "why": "Nega Studify",
+      "process": "Jarayon",
+      "articles": "Maqolalar",
+      "about": "Biz haqimizda",
+      "pricing": "Narxlar",
+      "results": "Natijalar",
+      "privacy_policy": "Maxfiylik siyosati",
+      "terms_conditions": "Foydalanish shartlari"
+    }
+  }
+  
