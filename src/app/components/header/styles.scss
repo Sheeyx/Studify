@@ -83,6 +83,10 @@
       }
     }
 
+    .contact-btn_mobile {
+      display: none;
+    }
+
   }
 
 .modal-content{
@@ -180,6 +184,26 @@
     .header {
       padding: 0 20px;
       .nav {
+        display: none;
+      }
+
+      .contact-btn_mobile {
+        display: block;
+        padding: 10px 20px;
+        border: 1px solid #ff7b40;
+        border-radius: 20px;
+        background-color: #ff7b40;
+        color: #fff !important;
+        font-size: 16px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        &:hover {
+          background-color: #ff7b40;
+          color: white;
+        }
+      }
+
+      .contact-btn_container {
         display: none;
       }
   

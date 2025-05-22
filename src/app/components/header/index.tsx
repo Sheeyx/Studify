@@ -46,6 +46,9 @@ const Header = () => {
           <li><a onClick={() => handleNavClick('pricing')}>{t('nav.pricing')}</a></li>
           <li><a onClick={() => handleNavClick('results')}>{t('nav.results')}</a></li>
           <li><a onClick={() => handleNavClick('blog')}>{t('nav.blog')}</a></li>
+          <a href="#contact" className="contact-btn_mobile" onClick={handleOpenModal}>
+            {t('nav.contact_us')}
+          </a>
         </ul>
       </nav>
 
@@ -53,7 +56,7 @@ const Header = () => {
         <div className="language-switcher">
           <LanguageSwitcher />
         </div>
-        <div>
+        <div className='contact-btn_container'>
           <a href="#contact" className="contact-btn" onClick={handleOpenModal}>
             {t('nav.contact_us')}
           </a>
