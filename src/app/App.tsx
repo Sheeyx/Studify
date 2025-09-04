@@ -24,6 +24,8 @@ import FAQ from '../screens/home/Faq';
 import Login from '../screens/admin/auth/Login';
 import AdminDashboard from '../screens/admin';
 import PrivateRoute from '../screens/admin/auth/PrivateRoute';
+import { Article } from '@mui/icons-material';
+import Articles from '../screens/home/Article';
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -44,6 +46,7 @@ const AppContent: React.FC = () => {
               <WhyStudify />
               <Process />
               <AboutCompany />
+              <Articles />
               <PricePackage />
               <OurResults />
               <CustomerReview />
