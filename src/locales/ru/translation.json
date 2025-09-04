@@ -185,14 +185,40 @@
   },
 
   "footer": {
-    "description": "Немного текста о том, как Studify делает отличную работу",
-    "why": "Почему Studify",
-    "process": "Процесс",
-    "articles": "Статьи",
-    "about": "О нас",
-    "pricing": "Цены",
-    "results": "Результаты",
-    "privacy_policy": "Политика конфиденциальности",
-    "terms_conditions": "Условия использования"
-  }
+  "description": "160100, Узбекистан",
+  "address": "Наманган, улица Водий 8",
+  "phone": "+998 88 658 10 00",
+  "email": "info@studify.uz",
+
+  "about_us": "О нас",
+  "why": "Почему Studify",
+  "process": "Процесс",
+  "about": "О компании",
+  "pricing": "Цены",
+  "results": "Результаты",
+  "blog": "Блог",
+
+  "services": "Услуги",
+  "university": "Поступление в университет",
+  "scholarships": "Стипендии",
+  "work_travel": "Work & Travel",
+  "language": "Языковые курсы",
+
+  "resources": "Ресурсы",
+  "visa": "Визовая поддержка",
+  "articles": "Статьи",
+  "success": "Истории успеха",
+  "faq": "Вопросы и ответы (FAQ)",
+
+  "follow": "Подписывайтесь на нас:",
+  "telegram": "Telegram",
+  "instagram": "Instagram",
+  "facebook": "Facebook",
+  "youtube": "YouTube",
+
+  "privacy_policy": "Политика конфиденциальности",
+  "terms_conditions": "Условия и положения",
+  "rights": "Все права защищены."
+}
+
 }

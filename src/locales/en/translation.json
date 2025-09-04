@@ -186,15 +186,41 @@
       },
       
     "footer": {
-      "description": "Some random text regarding Studify doing great work",
-      "why": "Why Studify",
-      "process": "Process",
-      "articles": "Articles",
-      "about": "About us",
-      "pricing": "Pricing",
-      "results": "Results",
-      "privacy_policy": "Privacy and policy",
-      "terms_conditions": "Terms and Conditions"
-    }
+  "description": "160100, Uzbekistan",
+  "address": "Namangan, Vodiy street 8",
+  "phone": "+998 88 658 10 00",
+  "email": "info@studify.uz",
+
+  "about_us": "About Us",
+  "why": "Why Studify",
+  "process": "Process",
+  "about": "About us",
+  "pricing": "Pricing",
+  "results": "Results",
+  "blog": "Blog",
+
+  "services": "Services",
+  "university": "University Admission",
+  "scholarships": "Scholarships",
+  "work_travel": "Work & Travel",
+  "language": "Language Courses",
+
+  "resources": "Resources",
+  "visa": "Visa Support",
+  "articles": "Articles",
+  "success": "Success Stories",
+  "faq": "FAQ",
+
+  "follow": "Follow us:",
+  "telegram": "Telegram",
+  "instagram": "Instagram",
+  "facebook": "Facebook",
+  "youtube": "YouTube",
+
+  "privacy_policy": "Privacy and policy",
+  "terms_conditions": "Terms and Conditions",
+  "rights": "All rights reserved."
+}
+
   }
   

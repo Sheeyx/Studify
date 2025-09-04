@@ -185,15 +185,41 @@
       },
 
     "footer": {
-      "description": "Studify ajoyib ish qilayotgani haqida matn",
-      "why": "Nega Studify",
-      "process": "Jarayon",
-      "articles": "Maqolalar",
-      "about": "Biz haqimizda",
-      "pricing": "Narxlar",
-      "results": "Natijalar",
-      "privacy_policy": "Maxfiylik siyosati",
-      "terms_conditions": "Foydalanish shartlari"
-    }
+  "description": "160100, O‘zbekiston",
+  "address": "Namangan, Vodiy ko‘chasi 8",
+  "phone": "+998 88 658 10 00",
+  "email": "info@studify.uz",
+
+  "about_us": "Biz haqimizda",
+  "why": "Nega Studify",
+  "process": "Jarayon",
+  "about": "Biz haqimizda",
+  "pricing": "Narxlar",
+  "results": "Natijalar",
+  "blog": "Blog",
+
+  "services": "Xizmatlar",
+  "university": "Universitetga qabul",
+  "scholarships": "Stipendiyalar",
+  "work_travel": "Work & Travel",
+  "language": "Til kurslari",
+
+  "resources": "Resurslar",
+  "visa": "Viza yordami",
+  "articles": "Maqolalar",
+  "success": "Muvaffaqiyat hikoyalari",
+  "faq": "Savol-javob (FAQ)",
+
+  "follow": "Bizni kuzating:",
+  "telegram": "Telegram",
+  "instagram": "Instagram",
+  "facebook": "Facebook",
+  "youtube": "YouTube",
+
+  "privacy_policy": "Maxfiylik siyosati",
+  "terms_conditions": "Shartlar va qoidalar",
+  "rights": "Barcha huquqlar himoyalangan."
+}
+
   }
   

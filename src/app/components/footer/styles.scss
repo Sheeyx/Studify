@@ -1,94 +1,123 @@
 .footer {
-    color: #6c757d;
-    text-align: left;
-    padding: 40px 20px !important;
+  background: #fff;
+  color: #333;
+  padding: 64px 0 28px;
+  overflow-x: clip; // no horizontal scroll
 
-    .footer-logo {
-        margin-bottom: 1.5rem;
+  .footer__phone, .footer__email {
+    a {
+        text-decoration: none;
+        color: #333;
 
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: bold;
+        &:hover{
             color: #ff7f50;
         }
+    }
+  }
 
-        .footer-description {
-            line-height: 40px;
-            text-align: center;
-        }
+  .footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .footer__grid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+
+  .footer__col {
+    line-height: 30px;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  .footer__brand {
+    .footer__logo {
+      width: 160px;
+      height: auto;
+      margin-bottom: 12px;
     }
 
-    .footer-links {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+    .footer__address {
+      margin: 10px 0;
+      font-style: normal;
 
-        .MuiTypography-body2 {
-            cursor: pointer;
-            margin: 1rem 0;
-
-            &:hover {
-                color: #ff7f50;
-            }
-        }
+      p {
+        margin: 4px 0;
+      }
     }
 
-    // Responsive adjustments
-    @media (max-width: 1024px) {
-        padding: 1.5rem;
+    .footer__social {
+      margin-top: 12px;
 
-        .footer-logo .logo-text {
-            font-size: 1.25rem;
-        }
+      button {
+        margin: 0 4px;
+      }
+    }
+  }
 
-        .footer-links {
-            justify-content: space-between;
-        }
+  .footer__title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #ff7f50;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    a {
+      color: inherit;
+      font-size: 15px;
+
+      &:hover {
+        color: #ff7f50;
+      }
     }
 
     @media (max-width: 768px) {
-        padding: 1rem;
-
-        .footer-logo .logo-text {
-            font-size: 1.1rem;
-        }
-
-        .footer-description {
-            line-height: 28px;
-            font-size: 0.9rem;
-        }
-
-        .footer-links {
-            flex-direction: column;
-            align-items: center;
-
-            .MuiTypography-body2 {
-                margin: 0.5rem 0;
-            }
-        }
+      align-items: center;
     }
 
-    @media (max-width: 480px) {
-        padding: 1rem;
-        text-align: center;
+  }
 
-        .footer-logo .logo-text {
-            font-size: 1rem;
-        }
+  .footer__social {
 
-        .footer-description {
-            line-height: 24px;
-            font-size: 0.85rem;
-        }
+    .MuiIconButton-root {
 
-        .footer-links {
-            align-items: center;
-
-            .MuiTypography-body2 {
-                font-size: 0.85rem;
-                margin: 0.5rem 0;
-            }
-        }
+      &:hover {
+        color: #ff7f50;
+      }
     }
+  }
+
+  .footer__bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+
+    .footer__legal {
+      margin-bottom: 8px;
+
+      a {
+        margin: 0 6px;
+        color: inherit;
+
+        &:hover {
+          color: #ff7f50;
+        }
+      }
+    }
+
+    .footer__copy {
+      font-size: 14px;
+      color: #6c757d;
+    }
+  }
 }
