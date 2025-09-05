@@ -7,11 +7,14 @@ import Photo from "../../../assets/hero-section/home.png";
 import PartnerCarousel from './components';
 import Telegram from "../../../assets/hero-section/tg.svg";
 import { useTranslation } from 'react-i18next';
+import { useGlobals } from '../../../app/hooks/useGlobals';
 
 export default function HeroSection() {
   const { t } = useTranslation();
   const experienceProps = useSpring({ from: { number: 0 }, to: { number: 5 }, config: { duration: 2000 } });
   const successRateProps = useSpring({ from: { number: 0 }, to: { number: 99 }, config: { duration: 2000 } });
+    const { openModal, handleOpenModal, handleCloseModal } = useGlobals();
+  
 
   return (
     <Box className="hero-section container">
@@ -24,7 +27,7 @@ export default function HeroSection() {
             {t('hero.description')}
           </Typography>
           <Box className="btn">
-            <Button variant="contained" className="consultaion-btn" endIcon={<ArrowForwardIcon />}>
+            <Button variant="contained" className="consultaion-btn" onClick={handleOpenModal} endIcon={<ArrowForwardIcon />}>
               {t('hero.free_consultation')}
             </Button>
             <Button
