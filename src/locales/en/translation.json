@@ -153,6 +153,11 @@
         "description": "Our customers got accepted into best universities and programs, below are some of them"
       },
 
+       "articles": {
+      "title": "Recent articles",
+      "description": "Stay informed with our recent articles and news"
+      },
+
       "reviews": {
         "title": "From our customers",
         "description": "Become our next success story"

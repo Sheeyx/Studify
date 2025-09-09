@@ -152,6 +152,11 @@
         "description": "Bizning mijozlar eng yaxshi universitet va dasturlarga qabul qilindi. Quyida ulardan ba'zilari keltirilgan"
       },
 
+      "articles":{
+      "title": "So‘nggi maqolalar",
+      "description": "Bizning so‘nggi maqolalar va yangiliklarimizdan xabardor bo‘ling"
+      },
+
       "reviews": {
         "title": "Mijozlarimizdan",
         "description": "Keyingi muvaffaqiyatli hikoya sizniki bo‘lsin"

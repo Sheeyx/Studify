@@ -81,15 +81,9 @@ const VideoCard: React.FC<VideoCardProps> = ({
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
-        {/* University shown; remove this block too if you don't want it */}
-        {/* <Typography variant="body2" color="text.secondary">{university}</Typography> */}
-
-        {/* Hidden by default */}
-        {showDescription && !!description && (
           <Typography variant="body2" color="text.secondary">
             {description}
           </Typography>
-        )}
       </Box>
     </Box>
   );

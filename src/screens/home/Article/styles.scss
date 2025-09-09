@@ -3,7 +3,7 @@ $text: #0f172a;
 $muted: #6b7280;
 
 .articles {
-  background: #fff7f0; // light peach like screenshot
+  background: #fff7f0; // light peach (screenshotdagidek)
   padding: 48px 0 60px;
 
   .articles__heading {
@@ -21,13 +21,21 @@ $muted: #6b7280;
 
   .articles__grid {
     margin-top: 20px;
+
+    // kartalarni bir xil balandlikda ushlash uchun
+    > .MuiGrid-item {
+      display: flex;
+    }
   }
 }
 
 /* Card */
 .article-card {
   cursor: pointer;
-  background: transparent;       // we style inner parts
+  display: flex;
+  flex-direction: column;
+  height: 100%;                 // bir xil balandlik
+  background: transparent;      
   border-radius: 26px 26px 0 0 !important;
   overflow: hidden;
   transition: transform .25s ease, box-shadow .25s ease;
@@ -45,7 +53,10 @@ $muted: #6b7280;
   }
 
   &__body {
-    padding: 16px 6px 6px 6px; // tighter like mock
+    flex: 1;                     // body qismi bo‘sh joyni to‘ldiradi
+    display: flex;
+    flex-direction: column;
+    padding: 16px 6px 6px 6px;
   }
 
   &__date {
@@ -60,6 +71,12 @@ $muted: #6b7280;
     font-size: clamp(18px, 2.2vw, 22px);
     line-height: 1.35;
     margin: 0 0 10px;
+
+    /* 2 qatorgacha clamp qilish */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__desc {
@@ -68,6 +85,15 @@ $muted: #6b7280;
     line-height: 1.55;
     margin-bottom: 14px;
     max-width: 90%;
+
+    /* 3 qator clamp */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    margin-top: 2px;
+    margin-bottom: auto;   // “Read more” linkni pastga suradi
   }
 
   &__link {
@@ -75,7 +101,7 @@ $muted: #6b7280;
     align-items: center;
     gap: 8px;
     font-weight: 700;
-    color: #0f172a;
+    color: $text;
     transition: color .2s ease;
 
     &:hover { color: $brand; }

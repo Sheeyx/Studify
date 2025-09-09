@@ -13,6 +13,7 @@ import Alert from "@mui/material/Alert";
 import ArticleService from "../../../services/ArticleService";
 import { Article } from "../../../libs/types/article";
 import { serverApi } from "../../../libs/types/config";
+import { useTranslation } from "react-i18next";
 
 type ArticleItem = {
   id: string;
@@ -28,10 +29,14 @@ const FallbackImg =
 
 const formatDate = (iso?: string) =>
   iso
-    ? new Intl.DateTimeFormat(undefined, { year: "numeric", month: "long", day: "numeric" })
-        .format(new Date(iso))
+    ? new Intl.DateTimeFormat(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }).format(new Date(iso))
     : "";
 
+// strip HTML to plain text
 const stripHtml = (html?: string) =>
   (html || "")
     .replace(/<br\s*\/?>/gi, " ")
@@ -40,14 +45,24 @@ const stripHtml = (html?: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
-const excerpt = (txt: string, max = 160) =>
-  txt.length <= max ? txt : txt.slice(0, max - 1).trimEnd() + "…";
+// WORD-based excerpt with ellipsis
+const excerptWords = (txt: string, maxWords = 50) => {
+  const words = txt.trim().split(/\s+/);
+  return words.length <= maxWords ? txt : words.slice(0, maxWords).join(" ") + "…";
+};
 
-const ArticleCard = ({ item }: { item: ArticleItem }) => (
-  <Card className="article-card" elevation={0}>
+// robust image src (absolute or relative)
+const resolveImage = (img?: string) => {
+  if (!img) return FallbackImg;
+  if (/^https?:\/\//i.test(img)) return img;
+  return `${serverApi}/${img}`;
+};
+
+const ArticleCard = ({ item, readMoreText }: { item: ArticleItem; readMoreText: string }) => (
+  <Card className="article-card" elevation={0} id="blog">
     <CardMedia
       component="img"
-      image={`${serverApi}/${item.image}`}
+      image={resolveImage(item.image)}
       alt={item.title}
       className="article-card__image"
       loading="lazy"
@@ -61,8 +76,8 @@ const ArticleCard = ({ item }: { item: ArticleItem }) => (
         {item.title}
       </Typography>
       <Typography className="article-card__desc">{item.description}</Typography>
-      <Link href={item.href} underline="none" className="article-card__link">
-        Read more <span className="arrow">→</span>
+      <Link underline="none" className="article-card__link" href={item.href}>
+        {readMoreText} <span className="arrow">→</span>
       </Link>
     </CardContent>
   </Card>
@@ -72,7 +87,9 @@ const Articles: React.FC = () => {
   const [items, setItems] = useState<ArticleItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState<string | null>(null);
+  const { t } = useTranslation();
 
+  const readMoreText = t("common.readMore", "Read more");
   const svc = useMemo(() => new ArticleService(), []);
 
   useEffect(() => {
@@ -89,16 +106,14 @@ const Articles: React.FC = () => {
           const title = a.articleTitle ?? a.title ?? "Untitled article";
           const html = a.articleContent ?? a.content ?? "";
           const created = a.createdAt ?? a.updatedAt ?? a.date;
-          const image =
-            a.articleImage ?? a.image ?? a.cover ?? FallbackImg;
-
-            console.log(" a.imageUrl", a)
+          const image = a.articleImage ?? a.image ?? a.cover ?? FallbackImg;
 
           return {
             id,
             title,
             date: formatDate(created),
-            description: excerpt(stripHtml(html), 160),
+            // 50 words (change to 100 if you want)
+            description: excerptWords(stripHtml(html), 50),
             image,
             href: `/articles/${id}`, // adjust to your route
           };
@@ -120,11 +135,9 @@ const Articles: React.FC = () => {
     <Box component="section" className="articles">
       <Container maxWidth="lg">
         <Typography component="h2" className="articles__heading">
-          Recent articles
+          {t("articles.title")}
         </Typography>
-        <Typography className="articles__sub">
-          Stay informed with our recent articles and news
-        </Typography>
+        <Typography className="articles__sub">{t("articles.description")}</Typography>
 
         {err && (
           <Box mt={2}>
@@ -138,7 +151,7 @@ const Articles: React.FC = () => {
                 <Grid item xs={12} md={4} key={`sk-${i}`}>
                   <Card elevation={0} className="article-card">
                     <Skeleton variant="rectangular" height={180} />
-                    <CardContent>
+                    <CardContent className="article-card__body">
                       <Skeleton width="40%" />
                       <Skeleton width="80%" />
                       <Skeleton width="60%" />
@@ -149,8 +162,8 @@ const Articles: React.FC = () => {
               ))
             : items.length > 0
             ? items.map((item) => (
-                <Grid item xs={12} md={4} key={item.id}>
-                  <ArticleCard item={item} />
+                <Grid item xs={12} md={4} key={item.id} className="articles__col">
+                  <ArticleCard item={item} readMoreText={readMoreText} />
                 </Grid>
               ))
             : !err && (
